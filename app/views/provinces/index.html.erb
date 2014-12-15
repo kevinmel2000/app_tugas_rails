@@ -1,0 +1,41 @@
+<div id="page-content">
+	<div class="block full">
+		<div class="block-title">
+			<div class="block-options pull-right">
+				<%= link_to new_province_path do %>
+					<div class="btn btn-success">
+						Add Province
+					</div>
+				<% end %>
+			</div>
+			<h2><strong>Provinces</strong> lists</h2>
+		</div>
+		<div class="table-responsive">
+			<table id="example-datatable" class="table table-vcenter table-condensed table-bordered">
+				<thead>
+					<tr>
+						<th class="text-center">No</th>
+						<th>Name</th>
+						<th>Created at</th>
+						<th class="text-center">Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @provinces.each_with_index do |province,index| %>
+					<tr>
+						<td class="text-center"><%= index + 1 %></td>
+						<td><%= province.name %></td>						
+						<td><%= province.created_at.strftime('%d %b %Y - at %I:%M%p') %></td>						
+						<td class="text-center">
+							<div class="btn-group">
+								<%= link_to 'Edit', edit_province_path(province), class: 'btn btn-default' %> 
+								<%= link_to 'Delete', province_path(province), method: 'delete', class: 'btn btn-danger' %>
+							</div>
+						</td>
+					</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

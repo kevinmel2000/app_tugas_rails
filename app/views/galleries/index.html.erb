@@ -1,0 +1,37 @@
+<div id="page-content">
+	<div class="block full">
+		<div class="block-title">
+			<div class="block-options pull-right">
+				<%= link_to new_gallery_path do %>
+					<div class="btn btn-success">Add Galleries</div>
+				<% end %>
+			</div>
+			<h2><strong>Galleries</strong> lists</h2>
+		</div>
+		<div class="table-responsive">
+			<table id="example-datatable" class="table table-vcenter table-condensed table-bordered">
+				<thead>
+					<tr>
+						<th class="text-center">No</th>
+						<th>Title</th>
+						<th class="text-center">Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @galleries.each_with_index do |resource,index| %>
+					<tr>
+						<td class="text-center"><%= index + 1 %></td>
+						<td><%= resource.title %></td>						
+						<td class="text-center">
+							<div class="btn-group">
+								<%= link_to 'Edit', edit_gallery_path(resource), class: 'btn btn-default' %> 
+								<%= link_to 'Delete', gallery_path(resource), method: 'delete', class: 'btn btn-danger' %>
+							</div>
+						</td>
+					</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

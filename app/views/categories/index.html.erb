@@ -1,0 +1,39 @@
+<div id="page-content">
+	<div class="block full">
+		<div class="block-title">
+			<div class="block-options pull-right">
+				<%= link_to new_category_path do %>
+					<div class="btn btn-success">Add Categories</div>
+				<% end %>
+			</div>
+			<h2><strong>Categories</strong> lists</h2>
+		</div>
+		<div class="table-responsive">
+			<table id="example-datatable" class="table table-vcenter table-condensed table-bordered">
+				<thead>
+					<tr>
+						<th class="text-center">No</th>
+						<th>Name</th>
+						<th>Ancestry</th>
+						<th class="text-center">Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @categories.each_with_index do |category,index| %>
+					<tr>
+						<td class="text-center"><%= index + 1 %></td>
+						<td><%= category.name %></td>
+						<td><%= category.ancestry %></td>
+						<td class="text-center">
+							<div class="btn-group">
+								<%= link_to 'Edit', edit_category_path(category), class: 'btn btn-default' %> 
+								<%= link_to 'Delete', category_path(category), method: 'delete', class: 'btn btn-danger' %> 
+							</div>
+						</td>
+					</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
