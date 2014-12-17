@@ -1,0 +1,27 @@
+                                      List of databases
+       Name        |  Owner   | Encoding |   Collate   |    Ctype    |   Access privileges   
+-------------------+----------+----------+-------------+-------------+-----------------------
+ db/apptugas1_dev  | fathan   | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ db/apptugas1_test | fathan   | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ db/apptugas4_dev  | fathan   | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ db/apptugas4_test | fathan   | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ db/apptugas5_dev  | fathan   | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ db/apptugas5_test | fathan   | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ db/bootcamp3_dev  | fathan   | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ db/bootcamp3_test | fathan   | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ db/bootcamp_dev   | fathan   | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ db/bootcamp_test  | fathan   | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ fathan            | fathan   | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ ototown_dev       | fathan   | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ ototown_test      | fathan   | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ paperclip2_dev    | fathan   | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ paperclip2_test   | fathan   | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ paperclip_dev     | fathan   | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ paperclip_test    | fathan   | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ postgres          | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ template0         | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres          +
+                   |          |          |             |             | postgres=CTc/postgres
+ template1         | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres          +
+                   |          |          |             |             | postgres=CTc/postgres
+(20 rows)
+

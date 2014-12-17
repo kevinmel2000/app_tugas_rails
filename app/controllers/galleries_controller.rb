@@ -9,12 +9,7 @@ class GalleriesController < ApplicationController
 
 	def create
 		@gallery = Gallery.new(gallery_params)
-
-		if @gallery.save
-      flash[:notice] = 'Data Has Been Created'
-    else
-      flash[:error] = 'Data Has Been not Created'
-    end
+		@gallery.save
     redirect_to galleries_path
 	end
 
@@ -37,7 +32,7 @@ class GalleriesController < ApplicationController
 
 	private
 		def gallery_params
-			params.require(:gallery).permit(:id, :title, :file_file_name, :file_content_type, :file_file_size, :file_updated_at, :galleriable_type, :galleriable_id)
+			params.require(:gallery).permit(:id, :title, :file, :galleriable_type, :galleriable_id)
 		end
 
 end

@@ -1,3 +1,4 @@
+<p id="notice"><%= notice %></p>
 <div id="page-content">
 	<div class="block full">
 		<div class="block-title">
@@ -14,6 +15,7 @@
 					<tr>
 						<th class="text-center">No</th>
 						<th>Title</th>
+						<th>Image</th>
 						<th class="text-center">Actions</th>
 					</tr>
 				</thead>
@@ -22,6 +24,7 @@
 					<tr>
 						<td class="text-center"><%= index + 1 %></td>
 						<td><%= resource.title %></td>						
+						<td><%= image_tag resource.file(:medium) %></td>						
 						<td class="text-center">
 							<div class="btn-group">
 								<%= link_to 'Edit', edit_gallery_path(resource), class: 'btn btn-default' %> 

@@ -8,7 +8,12 @@
 			</div>
 			<h2><strong>Gallery</strong> New</h2>
 		</div>
-		<%= form_for @gallery, :url => galleries_path, :html => {:class => "form-horizontal form-bordered", :multipart => true } do |f| %>
+		<%= form_for @gallery,
+			:html => {
+				:class => "form-horizontal form-bordered", 
+				:multipart => true 
+			} do |f| 
+		%>
 		<fieldset>
 			<div class="form-group">
 				<label class="col-md-4 control-label" for="example-chosen">Title</label>
