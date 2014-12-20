@@ -12,11 +12,7 @@ class ProductsController < ApplicationController
 
 	def create
 		@product = Product.new(product_params)
-		if @product.save
-      flash[:notice] = 'Data Has Been Created'
-    else
-      flash[:error] = 'Data Has Been not Created'
-    end
+		@product.save
 		redirect_to products_path
 	end
 

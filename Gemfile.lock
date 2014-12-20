@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/stefankroes/ancestry.git
+  revision: 2d80781c4f8f95183e446198d0128314bff0ca88
+  specs:
+    ancestry (2.1.0)
+      activerecord (>= 3.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -27,8 +34,6 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
-    ancestry (2.1.0)
-      activerecord (>= 3.0.0)
     arel (5.0.1.20140414130214)
     bcrypt (3.1.9)
     builder (3.2.2)
@@ -132,7 +137,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  ancestry
+  ancestry!
   coffee-rails (~> 4.0.0)
   devise
   jbuilder (~> 2.0)

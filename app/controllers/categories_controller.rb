@@ -1,6 +1,7 @@
 class CategoriesController < ApplicationController
+
 	def index
-		@categories = Category.latest
+		@categories = Category.arrange_as_array({:order => 'name'})
 	end
 
 	def new
@@ -9,11 +10,7 @@ class CategoriesController < ApplicationController
 
 	def create
 		@category = Category.new(category_params)
-		if @category.save
-      flash[:notice] = 'Data Has Been Created'
-    else
-      flash[:error] = 'Data Has Been not Created'
-    end
+		@category.save
 		redirect_to categories_path
 	end
 
@@ -36,7 +33,7 @@ class CategoriesController < ApplicationController
 
 	private
 		def category_params
-			params.require(:category).permit(:id, :name, :ancestry)
+			params.require(:category).permit(:id, :name, :parent_id)
 		end
 
 end

@@ -1,4 +1,5 @@
 <div id="page-content">
+	<%= render 'shared/title_top' %>
 	<div class="block">
 		<div class="block-title">
 			<div class="block-options pull-right">
@@ -8,7 +9,7 @@
 			</div>
 			<h2><strong>Province</strong> New</h2>
 		</div>
-		<%= form_for @province, :url => provinces_path, :html => {:class => "form-horizontal form-bordered", :multipart => true } do |f| %>
+		<%= form_for @province, :html => {:class => "form-horizontal form-bordered"} do |f| %>
 		<fieldset>
 			<div class="form-group">
 			<label class="col-md-4 control-label" for="example-chosen">Name</label>
@@ -17,9 +18,9 @@
 				</div>
 			</div>
 			<div class="form-group">
-				<label class="col-md-4 control-label" for="example-chosen">Ancestry</label>
+				<label class="col-md-4 control-label" for="example-chosen">Parent</label>
 				<div class="col-md-6">
-					<%= f.text_field :ancestry, class: 'form-control', placeholder: 'Ancestry' %>
+    			<%= f.collection_select :parent_id, Province.arrange_as_array({:order => 'name'}, @province.possible_parents) , :id, :name_for_selects, :include_blank => true %>
 				</div>
 			</div>
 		</fieldset>

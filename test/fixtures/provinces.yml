@@ -2,8 +2,6 @@
 
 one:
   name: MyString
-  ancestry: MyString
 
 two:
   name: MyString
-  ancestry: MyString

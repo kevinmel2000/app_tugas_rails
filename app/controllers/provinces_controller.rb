@@ -1,6 +1,6 @@
 class ProvincesController < ApplicationController
 	def index
-		@provinces = Province.latest
+		@provinces = Province.arrange_as_array({:order => 'name'})
 	end
 
 	def new
@@ -9,11 +9,7 @@ class ProvincesController < ApplicationController
 
 	def create
 		@province = Province.new(province_params)
-		if @province.save
-      flash[:notice] = 'Data Has Been Created'
-    else
-      flash[:error] = 'Data Has Been not Created'
-    end
+		@province.save
 		redirect_to provinces_path
 	end
 
@@ -36,6 +32,6 @@ class ProvincesController < ApplicationController
 
 	private
 		def province_params
-			params.require(:province).permit(:id, :name, :ancestry)
+			params.require(:province).permit(:id, :name, :parent_id)
 		end
 end

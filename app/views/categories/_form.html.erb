@@ -1,4 +1,5 @@
 <div id="page-content">
+	<%= render 'shared/title_top' %>
 	<div class="block">
 		<div class="block-title">
 			<div class="block-options pull-right">
@@ -19,7 +20,7 @@
 			<div class="form-group">
 				<label class="col-md-4 control-label" for="example-chosen">Parent</label>
 				<div class="col-md-6">
-					<%= f.text_field :ancestry, class: 'form-control', placeholder: 'Ancestry' %>
+    			<%= f.collection_select :parent_id, Category.arrange_as_array({:order => 'name'}, @category.possible_parents) , :id, :name_for_selects, :include_blank => true %>
 				</div>
 			</div>
 		</fieldset>

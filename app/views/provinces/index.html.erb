@@ -4,7 +4,7 @@
 			<div class="block-options pull-right">
 				<%= link_to new_province_path do %>
 					<div class="btn btn-success">
-						Add Province
+						New Data
 					</div>
 				<% end %>
 			</div>
@@ -16,6 +16,7 @@
 					<tr>
 						<th class="text-center">No</th>
 						<th>Name</th>
+						<th>Parent</th>
 						<th>Created at</th>
 						<th class="text-center">Actions</th>
 					</tr>
@@ -24,7 +25,8 @@
 					<% @provinces.each_with_index do |province,index| %>
 					<tr>
 						<td class="text-center"><%= index + 1 %></td>
-						<td><%= province.name %></td>						
+						<td><%= province.name_for_tree %></td>						
+						<td><%= province.parent ? province.parent.name : '-' %></td>						
 						<td><%= province.created_at.strftime('%d %b %Y - at %I:%M%p') %></td>						
 						<td class="text-center">
 							<div class="btn-group">

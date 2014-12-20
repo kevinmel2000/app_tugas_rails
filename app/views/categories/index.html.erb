@@ -3,7 +3,9 @@
 		<div class="block-title">
 			<div class="block-options pull-right">
 				<%= link_to new_category_path do %>
-					<div class="btn btn-success">Add Categories</div>
+					<div class="btn btn-success">
+						New Data
+					</div>
 				<% end %>
 			</div>
 			<h2><strong>Categories</strong> lists</h2>
@@ -14,7 +16,7 @@
 					<tr>
 						<th class="text-center">No</th>
 						<th>Name</th>
-						<th>Ancestry</th>
+						<th>Parent</th>
 						<th class="text-center">Actions</th>
 					</tr>
 				</thead>
@@ -22,8 +24,8 @@
 					<% @categories.each_with_index do |category,index| %>
 					<tr>
 						<td class="text-center"><%= index + 1 %></td>
-						<td><%= category.name %></td>
-						<td><%= category.ancestry %></td>
+						<td><%= category.name_for_tree %></td>
+						<td><%= category.parent ? category.parent.name : '-' %></td>
 						<td class="text-center">
 							<div class="btn-group">
 								<%= link_to 'Edit', edit_category_path(category), class: 'btn btn-default' %> 
