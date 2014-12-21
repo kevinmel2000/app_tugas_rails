@@ -1,0 +1,55 @@
+<!-- news n ads client -->
+<section class="news">
+	<h3>INFORMASI SEPUTAR DUNIA PROPERTY DAN RUMAH DIJUAL</h3>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<%= image_tag 'ads1.png', alt: 'Gambar' %>
+				<div class="br10"></div>
+				<%= image_tag 'ads2.png', alt: 'Gambar' %>
+			</div>
+			<div class="col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-heading panel-green">
+						RUMAH DIJUAL TERBARU
+					</div>
+					<ul class="list-group">
+						<% (1..5).each do %>
+							<div class="list-group-item mrg-btm-house">
+								<div class="thumbnail">
+									<%= image_tag 'berita.jpg', alt: 'Gambar' %>
+								</div>
+								<div class="caption">
+									<a href="">Judul Iklan Property</a>
+									<div class="br5"></div>
+									<span class="locationADS">Kota Sukabumi, Baros</span>
+									<div class="br5"></div>
+									<span class="priceADS">Rp. 200.000.000,-</span>
+								</div>
+							</div>
+						<% end %>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-heading panel-green">
+						TIPS & BERITA PROPERTI
+					</div>
+					<ul class="list-group">
+						<% (1..6).each do %>
+							<div class="list-group-item">
+								<div class="thumbnail">
+									<%= image_tag 'berita.jpg', alt: 'Gambar' %>
+								</div>
+								<div class="caption">
+									<a href=""><span>Judul Berita Properti</span></a>
+								</div>
+							</div>
+						<% end %>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

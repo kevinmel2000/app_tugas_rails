@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Ruby On Rails APP</title>
-	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-	<%= csrf_meta_tags %>
+  <title>Sukabumiproperty</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
 </head>
 <body>
-	<div id="page-wrapper">
-		<div id="page-container" class="sidebar-partial sidebar-visible-lg sidebar-yes-animations">
-			<%= render 'shared/sidebar_right'; %>
-			<%= render 'shared/sidebar_left'; %>
-			<div id="main-container">
-				<%= render 'shared/header_top_navbar'; %>
-				<%= yield %>
-				<%= render 'shared/footer'; %>
-			</div>
-		</div>
-	</div>
+	<%= render 'shareds/scroll_to_top' %>
+	<%= render 'shareds/navbar_top' %>
+	
+	<% if params[:action] == 'home' %>
+		<%= render 'shareds/carousel_top' %>
+	<% end %>
+
+	<%= yield %>
+
+	<% if params[:action] == 'home' %>
+	<%= render 'shareds/email_share' %>
+	<% end %>
+	
+	<%= render 'shareds/footer' %>
+
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
-<a href="#" id="to-top"><i class="fa fa-angle-double-up"></i></a>
-<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </html>

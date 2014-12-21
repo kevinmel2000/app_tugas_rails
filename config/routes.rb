@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
+  
+  root 'publics#home'
+  
+  get 'catalog',      to: 'publics#catalog',        as: 'catalog'
+  get 'single_post',  to: 'publics#single_post',    as: 'single_post'
+  get 'about_us',     to: 'publics#about_us',       as: 'about_us'
+  get 'forum_diskusi',to: 'publics#forum_diskusi',  as: 'forum_diskusi'
+  get 'contact',      to: 'publics#contact',        as: 'contact'
+  get 'questions',    to: 'publics#questions',      as: 'questions'
+  get 'sign_in',      to: 'publics#sign_in',        as: 'sign_in'
+  get 'sign_up',      to: 'publics#sign_up',        as: 'sign_up'
 
   namespace :backend do
     get '/', to: 'home#index'

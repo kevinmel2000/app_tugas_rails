@@ -1,0 +1,81 @@
+<!-- ads top  -->
+<section class="ads-top">
+	<div class="container">
+		<div class="br25"></div>
+		<div class="row">
+			<div class="row">
+				<div class="col-md-9">
+					<h3>IKLAN TERBARU</h3>
+				</div>
+				<div class="col-md-3">
+					<div class="controls pull-right hidden-xs">
+						<a class="left fa fa-caret-square-o-left btn btn-default btn-xs" href="#carousel2" data-slide="prev"></a>
+						<a class="left fa fa-caret-square-o-right btn btn-default btn-xs" href="#carousel2" data-slide="next"></a>
+					</div>
+				</div>
+			</div>
+			<div id="carousel2" class="carousel slide hidden-xs" data-ride="carousel">
+				<div class="carousel-inner">
+					<div class="item active">
+						<div class="row">
+							<% (1..4).each do%>
+							<div class="col-sm-3">
+								<div class="col-item">
+									<div class="photo">
+										<%= image_tag 'berita6.jpg', alt: 'Gambar', class: 'img-responsive' %>
+									</div>
+									<div class="info">
+										<div class="row">
+											<div class="price col-md-6">
+												<h5 class="italic">Title news</h5>
+											</div>
+										</div>
+										<div class="separator clear-left">
+											<p class="btn-details flt-right">
+												<a href="#" class="btn btn-primary btn-sm">
+													<i class="fa fa-list"></i> Details
+												</a>
+											</p>
+										</div>
+										<div class="clearfix">
+										</div>
+									</div>
+								</div>
+							</div>
+							<% end %>
+						</div>
+					</div>
+					<div class="item">
+						<div class="row">
+							<% (1..4).each do%>
+							<div class="col-sm-3">
+								<div class="col-item">
+									<div class="photo">
+										<%= image_tag 'berita6.jpg', alt: 'Gambar', class: 'img-responsive' %>
+									</div>
+									<div class="info">
+										<div class="row">
+											<div class="price col-md-6">
+												<h5 class="italic">Title news</h5>
+											</div>
+										</div>
+										<div class="separator clear-left">
+											<p class="btn-details flt-right">
+												<a href="#" class="btn btn-primary btn-sm">
+													<i class="fa fa-list"></i> Details
+												</a>
+											</p>
+										</div>
+										<div class="clearfix">
+										</div>
+									</div>
+								</div>
+							</div>
+							<% end %>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

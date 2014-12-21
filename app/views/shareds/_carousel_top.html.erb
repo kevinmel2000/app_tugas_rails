@@ -1,0 +1,114 @@
+<section class="carousel shadow-bottom">
+	<div class="carousel-top">
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+			</ol>
+			<div class="carousel-inner">
+				<%= (1..4).each do |f| %>
+				<div class="item <%= 'active' if f == 1 %>">
+					<%= image_tag 'home-banners4.jpg', alt: 'Sukabumi Property' %>
+				</div>
+				<% end %>
+			</div>
+			<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+				<span class="fa fa-angle-left font100"></span>
+			</a>
+			<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+				<span class="fa fa-angle-right font100"></span>
+			</a>
+		</div>
+		<div class="main-text hidden-xs">
+			<div class="col-md-12">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<div class="position fix-right-search">
+						<div class="panel panel-defaut panel-transparent">
+							<div class="panel-body panel-text-grey">
+								<div class="col-md-12">
+									<h3>CARI PROPERTY DISINI!</h3>
+								</div>
+								<div class="br10"></div>
+								<form action="" method="POST">
+									<div class="search-input-top-index1">
+										<div class="col-md-12">
+											<label class="label-search-carousel">Lokasi</label>
+											<input type="text" class="form-control" name="" placeholder="Masukan Lokasi Pencarian">
+										</div>
+									</div>
+									<div class="br20"></div>
+									<div class="search-input-top-index">
+										<div class="col-md-6">
+											<label class="label-search-carousel">Type Property</label>
+											<select class="form-control chosen-select" tabindex="2">
+												<option value="">Jenis Property ...</option>
+												<option value="Rumah">Rumah</option>
+												<option value="Kontrakan">Kontrakan</option>
+												<option value="Tanah">Tanah</option>
+												<option value="Apartemen">Apartemen</option>
+											</select>
+										</div>
+										<div class="col-md-6">
+											<label class="label-search-carousel">Kondisi</label>
+											<select name="" class="form-control chosen-select" tabindex="2">
+												<option value="">Jenis Kondisi ...</option>
+												<option value="Sangat Baik">Sangat Baik</option>
+												<option value="Baik">Baik</option>
+												<option value="Cukup">Cukup</option>
+												<option value="Jelek">Jelek</option>
+											</select>
+										</div>
+									</div>
+									<div class="br15"></div>
+									<div class="search-input-top-index">
+										<div class="col-md-6">
+											<label class="label-search-carousel">Dari Harga</label>
+											<select name="" class="form-control chosen-select" tabindex="2">
+												<option value="">Dari harga ...</option>
+												<option value="1">1</option>
+												<option value="1">1</option>
+												<option value="1">1</option>
+												<option value="1">1</option>
+												<option value="1">1</option>
+											</select>
+										</div>
+										<div class="col-md-6">
+											<label class="label-search-carousel">Sampai Harga</label>
+											<select name="" class="form-control chosen-select" tabindex="2">
+												<option value="">Sampai harga ...</option>
+												<option value="1">1</option>
+												<option value="1">1</option>
+												<option value="1">1</option>
+												<option value="1">1</option>
+												<option value="1">1</option>
+												<option value="1">1</option>
+											</select>
+										</div>
+									</div>
+									<div class="br10"></div>
+									<div class="search-input-top-index">
+										<div class="col-md-12">
+											<label class="label-search-carousel">Kata Kunci</label>
+											<input type="text" class="form-control height40" name="" placeholder="Masukan Kata Kunci Pencarian">
+										</div>
+									</div>
+									<div class="br10"></div>
+									<div class="col-md-12">
+										<label class="label-search-carousel">&nbsp;</label>
+										<button id="js-trigger-overlay" class="btn btn-info btn-green-effect btn-block">Cari Property</button>
+									</div>
+									<div class="br15"></div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3"></div>
+			</div>
+		</div>
+	</div>
+	<div id="push"></div>
+</section>

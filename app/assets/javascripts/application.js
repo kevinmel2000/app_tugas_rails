@@ -12,14 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery-1.11.1.min
-//= require jquery.min
-//= require bootstrap.min-3.0
-//= require app-3.0
-//= require compAnimations
-//= require index
-//= require modernizr-2.7.1-respond-1.4.2.min
-//= require plugins-3.0.js
-//= require tablesDatatables
-//= require script
-//= require cocoon
+
+//= require frontend/jquery-2.1.1.min
+//= require frontend/bootstrap.min
+//= require frontend/modernizr
+//= require frontend/script
+//= require frontend/jquery.chosen
+//= require frontend/chosen.prism

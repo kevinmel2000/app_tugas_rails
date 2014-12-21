@@ -10,10 +10,9 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require bootstrap.min-3.0
- *= require main-3.0
- *= require plugins-3.0
- *= require themes-3.0
- *= require style
+ *= require frontend/bootstrap
+ *= require frontend/font-awesome
+ *= require frontend/style
+ *= require frontend/chosen
  *= require_self
  */
