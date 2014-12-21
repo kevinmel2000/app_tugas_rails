@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ruby On Rails APP</title>
+	<%= stylesheet_link_tag    'application_backend', media: 'all', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+</head>
+<body>
+	<div id="page-wrapper">
+		<div id="page-container" class="sidebar-partial sidebar-visible-lg sidebar-yes-animations">
+			<%= render 'backend/shared/sidebar_left'; %>
+			<div id="main-container">
+				<%= render 'backend/shared/header_top_navbar'; %>
+				<%= yield %>
+				<%= render 'backend/shared/footer'; %>
+			</div>
+		</div>
+	</div>
+</body>
+<a href="#" id="to-top"><i class="fa fa-angle-double-up"></i></a>
+<%= javascript_include_tag 'application_backend', 'data-turbolinks-track' => true %>
+</html>

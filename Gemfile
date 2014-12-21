@@ -13,6 +13,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'spring',        group: :development
 # gem 'mysql2'
+
+gem 'cocoon'  
 gem 'pg'
 gem 'devise'
 gem 'ancestry', github: 'stefankroes/ancestry'

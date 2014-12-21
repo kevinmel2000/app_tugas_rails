@@ -22,3 +22,4 @@
 //= require plugins-3.0.js
 //= require tablesDatatables
 //= require script
+//= require cocoon

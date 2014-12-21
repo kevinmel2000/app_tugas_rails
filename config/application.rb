@@ -32,7 +32,7 @@ module AppTugas
     config.assets.paths << Rails.root.join("vendor", "assets", "javascripts")
     config.assets.initialize_on_precompile = true
     config.action_dispatch.ignore_accept_header = true
-    config.assets.precompile += %w( .svg .eot .woff .ttf backend_js.js backend_css.css )  
+    config.assets.precompile += %w( .svg .eot .woff .ttf application_backend.js application_backend.css )  
     config.quiet_assets = true
     config.action_dispatch.default_headers = {
         'X-Frame-Options' => 'ALLOWALL',

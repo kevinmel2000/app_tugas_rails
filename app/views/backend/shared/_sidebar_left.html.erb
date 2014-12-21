@@ -1,0 +1,146 @@
+<div id="sidebar">
+	<div id="sidebar-scroll">
+		<div class="sidebar-content">
+			<%= link_to backend_path, class: 'sidebar-brand' do %>
+				<i class="gi gi-home"></i>
+				<span class="sidebar-nav-mini-hide">
+					<strong>Adminis</strong>trator
+				</span>
+			<% end %>
+			<div class="sidebar-section sidebar-user clearfix sidebar-nav-mini-hide">
+				<div class="sidebar-user-avatar">
+					<%= link_to backend_path do %>
+						<%= image_tag 'avatar2.jpg', alt:'avatar' %>
+					<% end %>
+				</div>
+				<div class="sidebar-user-name">Fathan R</div>
+				<div class="sidebar-user-links">
+					<a href="#" data-toggle="tooltip" data-placement="bottom" title="Profile">
+						<i class="gi gi-user"></i>
+					</a>
+					<a href="#" data-toggle="tooltip" data-placement="bottom" title="Messages">
+						<i class="gi gi-envelope"></i>
+					</a>
+					<a href="#" data-toggle="modal" class="enable-tooltip" data-placement="bottom" title="Settings">
+						<i class="gi gi-cogwheel"></i>
+					</a>
+					<a href="#" data-toggle="tooltip" data-placement="bottom" title="Logout">
+						<i class="gi gi-exit"></i>
+					</a>
+				</div>
+			</div>
+			<ul class="sidebar-nav">
+				<li>
+					<%= link_to backend_path do %>
+						<i class="gi gi-home sidebar-nav-icon"></i> 
+						<span class="sidebar-nav-mini-hide">Dashboard</span>
+					<% end %>
+				</li>
+				<li class="sidebar-header">
+					<span class="sidebar-header-title">USERS</span>
+				</li>
+				<li>
+					<a href="#" class="sidebar-nav-menu">
+						<i class="fa fa-angle-left sidebar-nav-indicator sidebar-nav-mini-hide"></i>
+						<i class="fa fa-users sidebar-nav-icon"></i> 
+						<span class="sidebar-nav-mini-hide">Admins</span>
+					</a>
+					<ul>
+						<li>
+							<%= link_to new_backend_product_path do %>
+								New Admin
+							<% end %>
+						</li>
+						<li>
+							<%= link_to backend_products_path do %>
+								List Admins
+							<% end %>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" class="sidebar-nav-menu">
+						<i class="fa fa-angle-left sidebar-nav-indicator sidebar-nav-mini-hide"></i>
+						<i class="fa fa-users sidebar-nav-icon"></i> 
+						<span class="sidebar-nav-mini-hide">Members</span>
+					</a>
+					<ul>
+						<li>
+							<%= link_to new_backend_product_path do %>
+								New Member
+							<% end %>
+						</li>
+						<li>
+							<%= link_to backend_products_path do %>
+								List Members
+							<% end %>
+						</li>
+					</ul>
+				</li>
+				<li class="sidebar-header">
+					<span class="sidebar-header-title">PRODUCTS</span>
+				</li>
+				<li>
+					<a href="#" class="sidebar-nav-menu">
+						<i class="fa fa-angle-left sidebar-nav-indicator sidebar-nav-mini-hide"></i>
+						<i class="gi gi-tags sidebar-nav-icon"></i> 
+						<span class="sidebar-nav-mini-hide">Product</span>
+					</a>
+					<ul>
+						<li>
+							<%= link_to new_backend_product_path do %>
+								New data
+							<% end %>
+						</li>
+						<li>
+							<%= link_to backend_products_path do %>
+								List data
+							<% end %>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" class="sidebar-nav-menu">
+						<i class="fa fa-angle-left sidebar-nav-indicator sidebar-nav-mini-hide"></i>
+						<i class="gi gi-certificate sidebar-nav-icon"></i> 
+						<span class="sidebar-nav-mini-hide">Category Product</span>
+					</a>
+					<ul>
+						<li>
+							<%= link_to new_backend_category_path do %>
+								New data
+							<% end %>
+						</li>
+						<li>
+							<%= link_to backend_categories_path do %>
+								List data
+							<% end %>
+						</li>
+					</ul>
+				</li>
+				<li class="sidebar-header">
+					<span class="sidebar-header-title">LOCATION</span>
+				</li>
+				<li>
+					<a href="#" class="sidebar-nav-menu">
+						<i class="fa fa-angle-left sidebar-nav-indicator sidebar-nav-mini-hide"></i>
+						<i class="gi gi-google_maps sidebar-nav-icon"></i> 
+						<span class="sidebar-nav-mini-hide">Province</span>
+					</a>
+					<ul>
+						<li>
+							<%= link_to new_backend_province_path do %>
+								New data
+							<% end %>
+						</li>
+						<li>
+							<%= link_to backend_provinces_path do %>
+								List data
+							<% end %>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

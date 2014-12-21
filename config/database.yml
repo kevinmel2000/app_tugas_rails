@@ -1,23 +1,23 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  database: apptugas5_dev
+  database: dari_guru_dev
   pool: 5
 
 development:
   <<: *default
-  database: db/apptugas5_dev
+  database: db/dari_guru_dev
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/apptugas5_test
+  database: db/dari_guru_test
 
 production:
   <<: *default
-  database: db/apptugas5_production
+  database: db/dari_guru_production
 
 
 # production:
