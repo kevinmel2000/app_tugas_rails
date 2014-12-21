@@ -1,28 +1,34 @@
-== README
+== DESCRIPTION
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+MINGGU KE 5
+- CRUD
+ 
+TUGAS
+product
+- title: string
+- description: text
+- price: decimal
+- category_id: integer
+- status: boolean
+- user_id : integer
+category
+- name : string
+- ancestry : <tt>gem ancestry</tt>
+gallery
+- title : string
+- file : attachment <tt>gem paperclip</tt>
+- galleriable_type : string
+- galleriable_id : integer
+province
+- nama: string
+- ancestry : <tt>gem ancestry</tt>
 
-Things you may want to cover:
+MINGGU KE 6
+Case Study next week:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+1. Ubah semua root ke backend
+2. gem 'devise'  <tt>installation, generate file, view devise => user</tt>
+3. gem 'omniauth' 
+4. gem 'omniauth-facebook'
+5. user <tt>has one profile => 'Full_name','avatar','gender','birthday','phone'</tt>
+6. profile <tt>Address polymorpics addressable -> 'address','province',' city','postcode'</tt>
