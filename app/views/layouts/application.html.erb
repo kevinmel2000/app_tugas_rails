@@ -1,26 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Sukabumiproperty</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+	<title>SukabumiProperty</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
 	<%= render 'shareds/scroll_to_top' %>
 	<%= render 'shareds/navbar_top' %>
-	
 	<% if params[:action] == 'home' %>
-		<%= render 'shareds/carousel_top' %>
+	<%= render 'shareds/carousel_top' %>
 	<% end %>
-
 	<%= yield %>
-
 	<% if params[:action] == 'home' %>
 	<%= render 'shareds/email_share' %>
 	<% end %>
-	
 	<%= render 'shareds/footer' %>
-
-	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </html>

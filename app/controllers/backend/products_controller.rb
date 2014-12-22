@@ -1,4 +1,6 @@
 class Backend::ProductsController < Backend::ApplicationBackendController
+	helper_method :products_category_options 
+
 	def index
 		# @articles = Article.order(created_at: :desc)
 		@products = Product.latest
@@ -45,4 +47,8 @@ class Backend::ProductsController < Backend::ApplicationBackendController
 																	        :_destroy
 																	      ])
 		end
+
+	  def products_category_options
+	    @products_category_options ||= Category.all.map{|category| [category.name, category.id] }
+	  end
 end

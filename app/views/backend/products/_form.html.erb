@@ -13,15 +13,15 @@
 		<fieldset>
 			<div class="form-group">
 				<label class="col-md-4 control-label" for="example-chosen">Status</label>
-				<div class="col-md-2">
-					<%= f.check_box :status %>
+				<div class="col-md-1">
+					<%= f.check_box :status, class: 'form-control' %>
 				</div>
 			</div>
 			<div class="form-group">
 				<label class="col-md-4 control-label" for="example-chosen">Category</label>
 				<div class="col-md-6">
 					<div class="input-group">
-						<%= f.number_field :category_id, class: 'form-control', placeholder: 'Title' %>
+						<%= f.select :category_id, options_for_select(products_category_options, @product.category_id),{prompt: 'Select Category...'}, class: 'form-control' %>
 					</div>
 				</div>
 			</div>
