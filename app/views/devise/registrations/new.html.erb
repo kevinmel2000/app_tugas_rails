@@ -1,0 +1,62 @@
+<section class="sub-top-header padding-top50">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12"> 
+        <h3>Masuk Anggota Sukabumi property</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page-sign-in-up">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            MASUK
+          </div>
+          <div class="panel-body">
+            <div class="form-group">
+              <a class="btn btn-primary btn-block">
+                <i class="fa fa-facebook pull-left"></i>
+                Daftar dengan Facebook
+              </a>
+            </div>
+            <div class="br5"></div>
+            <i class="hr-login-modal"></i>
+            <span class="txt-or-login">Atau</span>
+            <div class="br5"></div>
+            <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= devise_error_messages! %>
+            <div class="form-group form-login">
+              <label class="label-form-login">Email</label>
+              <%= f.email_field :email, class: 'form-control', autofocus: true %>
+              <div class="br10"></div>
+              <label class="label-form-login">Username</label>
+              <%= f.email_field :username, class: 'form-control' %>
+              <div class="br10"></div>
+              <label class="label-form-login">Password</label>
+              <% if @validatable %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <% end %><br />
+              <%= f.password_field :password, class: 'form-control', autocomplete: "off" %>
+              <div class="br10"></div>
+              <label class="label-form-login">Konfirmasi Password</label>
+              <%= f.password_field :password_confirmation, class: 'form-control', autocomplete: "off" %>
+              <div class="br10"></div>
+              <div class="input-group">
+                <label></label>
+                <%= f.submit "Sign up", class: 'btn btn-success' %>
+              </div>
+              <%= render "devise/shared/links" %>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+</section>

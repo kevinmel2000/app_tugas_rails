@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  devise_for :users
   root 'publics#home'
   
   get 'catalog',      to: 'publics#catalog',        as: 'catalog'

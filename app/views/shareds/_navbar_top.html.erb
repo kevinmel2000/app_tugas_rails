@@ -42,16 +42,28 @@
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
-					<li class="#">
-						<a href="#" class="sign-in-link" data-toggle="modal" data-target="#login">
-							MASUK
-						</a>          
-					</li>
-					<li class="">
-						<a href="#" class="sign-up-link" data-toggle="modal" data-target="#signup">
-							DAFTAR
-						</a>          
-					</li>
+					<% if user_signed_in? %>
+						<li class="#">
+							Welcome, <strong><%= current_user.email %></strong>
+						</li>
+						<li class="">
+							<%= link_to 'Edit Profile', edit_user_registration_path %>
+						</li>
+						<li class="">
+							<%= link_to 'Logout', destroy_user_session_path, method: :delete %>        
+						</li>
+					<% else %>
+						<li class="#">
+							<a href="#" class="sign-in-link" data-toggle="modal" data-target="#login">
+								MASUK
+							</a>          
+						</li>
+						<li class="">
+							<a href="#" class="sign-up-link" data-toggle="modal" data-target="#signup">
+								DAFTAR
+							</a>          
+						</li>
+					<% end %>
 				</ul>
 			</div>
 		</div>

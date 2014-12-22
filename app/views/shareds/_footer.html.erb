@@ -37,22 +37,22 @@
 					<ul>
 						<li>
 							<%= link_to forum_diskusi_path do %>
-								Forum Diskusi
+							Forum Diskusi
 							<% end %>
 						</li>
 						<li>
 							<%= link_to questions_path do %>
-								F.A.Q
+							F.A.Q
 							<% end %>
 						</li>
 						<li>
 							<%= link_to contact_path do %>
-								Kontak Kami
+							Kontak Kami
 							<% end %>
 						</li>
 						<li>
 							<%= link_to about_us_path do %>
-								Tentang Kami
+							Tentang Kami
 							<% end %>
 						</li>
 					</ul>
@@ -82,79 +82,80 @@
 					<i class="hr-login-modal"></i>
 					<span class="txt-or-login">Atau</span>
 					<div class="br5"></div>
-					<form action="" method="POST" >
-						<div class="form-group form-login">
-							<label class="label-form-login">Username</label>
-							<input type="text" class="form-control" name="username" placeholder="Username">
-							<div class="br10"></div>
-							<label class="label-form-login">Password</label>
-							<input type="text" class="form-control" name="username" placeholder="Password">
-							<div class="br10"></div>
-							<div class="col-md-12 margin-bottom10 padding0">
-								<input name="#" type="hidden" value="0">
-								<input class="#" id="user_remember_me" name="#" type="checkbox" value="1">
-								<span>Biarkan saya tetap masuk</span>
-							</div>
-							<div class="col-md-12 margin-bottom10 margin-bottom10 padding0">
-								<a href="">Lupa Kata Sandi!</a>
-							</div>
-							<div class="br10"></div>
-							<div class="input-group">
-								<label></label>
-								<input type="submit" class="btn btn-success">
-							</div>
-							<div class="col-md-12 margin-top10 padding0">
-								Belum punya akun! <a href="#signup" data-dismiss="modal" data-toggle="modal" data-target="#signup">Daftar</a>
-							</div>
+					<%= form_for :user, url: user_session_path, method: 'post' do |f| %>
+					<div class="form-group form-login">
+						<%= f.label :email, '', class: 'label-form-login' %>
+						<%= f.email_field :email, class: 'form-control', placeholder: 'example@email.com',required: true %>
+						<div class="br10"></div>
+						<%= f.label :password, '', class: 'label-form-login' %>
+						<%= f.password_field :password, class: 'form-control', placeholder: 'Your Password', required: true %>
+						<div class="br10"></div>
+						<div class="col-md-12 margin-bottom10 padding0">
+							<input name="#" type="hidden" value="0">
+							<input class="#" id="user_remember_me" name="#" type="checkbox" value="1">
+							<span>Biarkan saya tetap masuk</span>
 						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-sm">
-			<div class="modal-content">
-				<div class="modal-header modal-header-signup">
-					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-					<h4 class="modal-title modal-title-2" id="myModalLabel">DAFTAR</h4>
-				</div>
-				<div class="modal-body">
-					<div class="form-group">
-						<a class="btn btn-primary btn-block">
-							<i class="fa fa-facebook pull-left"></i>
-							Daftar dengan Facebook
-						</a>
+						<div class="col-md-12 margin-bottom10 margin-bottom10 padding0">
+							<a href="">Lupa Kata Sandi!</a>
+						</div>
+						<div class="br10"></div>
+						<div class="input-group">
+							<label></label>
+							<%= f.submit :SignIn, class: 'btn btn-success' %>
+						</div>
+						<div class="col-md-12 margin-top10 padding0">
+							Belum punya akun! <a href="#signup" data-dismiss="modal" data-toggle="modal" data-target="#signup">Daftar</a>
+						</div>
 					</div>
-					<div class="br5"></div>
-					<i class="hr-login-modal"></i>
-					<span class="txt-or-login">Atau</span>
-					<div class="br5"></div>
-					<form action="" method="POST" >
-						<div class="form-group form-login">
-							<label class="label-form-login">Username</label>
-							<input type="text" class="form-control" name="username" placeholder="Username" required>
-							<div class="br10"></div>
-							<label class="label-form-login">Email</label>
-							<input type="email" class="form-control" name="username" placeholder="Username" required>
-							<div class="br10"></div>
-							<label class="label-form-login">Password</label>
-							<input type="text" class="form-control" name="username" placeholder="Password" required>
-							<div class="br10"></div>
-							<label class="label-form-login">Konfirmasi Password</label>
-							<input type="text" class="form-control" name="username" placeholder="Password" required>
-							<div class="br10"></div>
-							<div class="input-group">
-								<label></label>
-								<input type="submit" class="btn btn-success">
-							</div>
-							<div class="col-md-12 margin-top10 padding0">
-								Belum punya akun! <a href="#login" data-dismiss="modal" data-toggle="modal" data-target="#login">Masuk</a>
-							</div>
-						</div>
-					</form>
-				</div>
+					<% end %>
 			</div>
 		</div>
 	</div>
+</div>
+<div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header modal-header-signup">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<h4 class="modal-title modal-title-2" id="myModalLabel">DAFTAR</h4>
+			</div>
+			<div class="modal-body">
+				<div class="form-group">
+					<a class="btn btn-primary btn-block">
+						<i class="fa fa-facebook pull-left"></i>
+						Daftar dengan Facebook
+					</a>
+				</div>
+				<div class="br5"></div>
+				<i class="hr-login-modal"></i>
+				<span class="txt-or-login">Atau</span>
+				<div class="br5"></div>
+				 <%= form_for :user, url: user_registration_path, method: 'post', html: {class: 'form-horizontal'} do |f| %>
+					<div class="form-group form-login">
+						<%= f.label :email, '', class: 'label-form-login' %>
+						<%= f.email_field :email, class: 'form-control', placeholder: 'example@email.com',required: true %>
+						<div class="br10"></div>
+						<%= f.label :username, '', class: 'label-form-login' %>
+						<%= f.text_field :username, class: 'form-control', placeholder: 'Your Username',required: true %>
+						<div class="br10"></div>
+						<%= f.label :password, '', class: 'label-form-login' %>
+						<%= f.password_field :password, class: 'form-control', placeholder: 'Your Password',required: true %>
+              <em>min 8 Characters</em>
+						<div class="br10"></div>
+						<%= f.label :password_confirmation, '', class: 'label-form-login' %>
+						<%= f.password_field :password_confirmation, class: 'form-control', placeholder: 'Confirm Your Password',required: true %>
+						<div class="br10"></div>
+						<div class="input-group">
+							<label></label>
+							<input type="submit" class="btn btn-success">
+						</div>
+						<div class="col-md-12 margin-top10 padding0">
+							Belum punya akun! <a href="#login" data-dismiss="modal" data-toggle="modal" data-target="#login">Masuk</a>
+						</div>
+					</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
 </section>

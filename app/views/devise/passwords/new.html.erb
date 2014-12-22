@@ -1,0 +1,41 @@
+<section class="sub-top-header padding-top50">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12"> 
+        <h3>Forgot Password</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page-sign-in-up">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+           Forgot your password?
+          </div>
+          <div class="panel-body">
+            <div class="br5"></div>
+            <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  					<%= devise_error_messages! %>
+            <div class="form-group form-login">
+              <label class="label-form-login">Email</label>
+              <%= f.email_field :email, class: 'form-control', autofocus: true %>
+              <div class="br10"></div>
+              <div class="input-group">
+                <label></label>
+                <%= f.submit "Send me reset password instructions", class: 'btn btn-warning btn-blocks' %>
+              </div>
+              <%= render "devise/shared/links" %>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+</section>
