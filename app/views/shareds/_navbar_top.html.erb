@@ -29,22 +29,12 @@
 							SINGLE POST
 						<% end %>      
 					</li>
-					<li class="">
-						<%= link_to sign_in_path do %>
-							SIGNIN PAGE
-						<% end %>      
-					</li>
-					<li class="">
-						<%= link_to sign_up_path do %>
-							SIGNUP PAGE
-						<% end %>      
-					</li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
 					<% if user_signed_in? %>
 						<li class="#">
-							Welcome, <strong><%= current_user.email %></strong>
+							<%= link_to current_user.email, root_path %>
 						</li>
 						<li class="">
 							<%= link_to 'Edit Profile', edit_user_registration_path %>

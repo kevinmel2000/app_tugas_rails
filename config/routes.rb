@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   
-  devise_for :users
+  mount Ckeditor::Engine => '/ckeditor'
+  devise_for :users,
+              controllers: {omniauth_callbacks: "omniauth_callbacks"}
+
   root 'publics#home'
   
   get 'catalog',      to: 'publics#catalog',        as: 'catalog'
@@ -14,11 +17,14 @@ Rails.application.routes.draw do
 
   namespace :backend do
     get '/', to: 'home#index'
+    # devise_for :admins, :controllers => { sessions: "backend/admins/sessions" }
     
     resources :categories
     resources :galleries
     resources :provinces
     resources :products
+    resources :addresses
+    resources :profiles
   end
   
   # Example of regular route:

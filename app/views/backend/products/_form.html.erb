@@ -36,14 +36,14 @@
 			</div>
 			<div class="form-group">
 				<label class="col-md-4 control-label" for="example-chosen">Description</label>
-				<div class="col-md-6">
-					<%= f.text_area :description, class: 'form-control txtarea', placeholder: 'Description' %>
+				<div class="col-md-8">
+					<%= f.cktext_area :description, class: 'form-control txtarea', placeholder: 'Description' %>
 				</div>
 			</div>			
 			<div class="form-group">
 				<label class="col-md-4 control-label" for="example-chosen">Price</label>
 				<div class="col-md-6">
-					<%= f.text_field :price, class: 'form-control', placeholder: 'Price' %>
+					<%= f.text_field :price, data: {autonumeric: true}, class: 'form-control', placeholder: 'Price' %>
 				</div>
 			</div>
 

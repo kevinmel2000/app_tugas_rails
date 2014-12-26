@@ -35,8 +35,13 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    autonumeric-rails (1.9.25.0)
+      jquery-rails (>= 2.0.2)
     bcrypt (3.1.9)
     builder (3.2.2)
+    ckeditor (4.1.0)
+      mime-types
+      orm_adapter (~> 0.5.0)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.5)
@@ -60,9 +65,17 @@ GEM
     execjs (2.2.2)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
+    has_scope (0.6.0.rc)
+      actionpack (>= 3.2, < 5)
+      activesupport (>= 3.2, < 5)
     hashie (3.3.1)
     hike (1.2.3)
     i18n (0.7.0)
+    inherited_resources (1.5.1)
+      actionpack (>= 3.2, < 4.2)
+      has_scope (~> 0.6.0.rc)
+      railties (>= 3.2, < 4.2)
+      responders (~> 1.0)
     jbuilder (2.2.6)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -74,6 +87,7 @@ GEM
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     mime-types (2.4.3)
+    mini_magick (4.0.0)
     minitest (5.5.0)
     multi_json (1.10.1)
     multi_xml (0.5.5)
@@ -161,11 +175,15 @@ PLATFORMS
 
 DEPENDENCIES
   ancestry!
+  autonumeric-rails
+  ckeditor
   cocoon
   coffee-rails (~> 4.0.0)
   devise
+  inherited_resources
   jbuilder (~> 2.0)
   jquery-rails
+  mini_magick
   omniauth
   omniauth-facebook
   paperclip

@@ -23,3 +23,5 @@
 //= require backend/tablesDatatables
 //= require backend/script
 //= require cocoon
+//= require autonumeric
+//= require ckeditor/init

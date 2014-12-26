@@ -1,0 +1,39 @@
+<div id="page-content">
+	<div class="block full">
+		<div class="block-title">
+			<div class="block-options pull-right">
+				<%= link_to new_backend_address_path do %>
+					<div class="btn btn-success">
+						New Data
+					</div>
+				<% end %>
+			</div>
+			<h2><strong>Address</strong> lists</h2>
+		</div>
+		<div class="table-responsive">
+			<table id="example-datatable" class="table table-vcenter table-condensed table-bordered">
+				<thead>
+					<tr>
+						<th class="text-center">No</th>
+						<th>Provinsi</th>
+						<th class="text-center">Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @addresses.each_with_index do |address,index| %>
+					<tr>
+						<td class="text-center"><%= index + 1 %></td>
+						<td><a href="javascript:void(0)"><%= address.province %></a></td>
+						<td class="text-center">
+							<div class="btn-group">
+								<%= link_to 'Edit', edit_backend_address_path(address), class: 'btn btn-default btn-sm' %> 
+								<%= link_to 'Delete', backend_address_path(address), method: 'delete', class: 'btn btn-danger btn-sm', locals: {resource: address, confirmation: "#{address.province} will be deleted, are you sure ?"}%> 
+							</div>
+						</td>
+					</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
