@@ -4,13 +4,13 @@ Devise.setup do |config|
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
-  # config.secret_key = 'f199ea55693c578c9ecdf8628b75fe49891724027d98f8f231f0f701b7f95bc686d6b1618ac0fa7e01eee17e01ee24638c519f3882b0c5cef5ce64b718a59f39'
+  # config.secret_key = 'd0f70e964b88f1621f78b77c3c859ba55a11fd03fce97099bee686f7be70a67cee33338cb9f3afe88f80c54e53737fbc824a7204fd09ebea97fb2c1320298ae0'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'no-reply@example.com'
+  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -20,9 +20,6 @@ Devise.setup do |config|
   # :mongoid (bson_ext recommended) by default. Other ORMs may be
   # available as additional gems.
   require 'devise/orm/active_record'
-  require "omniauth-facebook"
-
-  config.omniauth :facebook, "469838703117701", "fee61290079d0016b446ecc5fd4e46d8" #local
 
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is
@@ -100,7 +97,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = '400a02fafc8c970b6d24243842401605d16aa41cdcb7014144877d0458ae8364836c414d184f34fe14de8b3b22f6360ebaafd5ff249bc53541edd8baec36515c'
+  # config.pepper = 'ad1afc5d9aa84bf46ead6dd16f17920d16e7e69447017cde58b5345b87dc561963b30e0e33e9369386a69a7682c7b75581dc09b54b93988d80e7eb54f976e918'
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
