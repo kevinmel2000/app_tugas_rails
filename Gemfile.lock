@@ -39,6 +39,7 @@ GEM
       jquery-rails (>= 2.0.2)
     bcrypt (3.1.9)
     builder (3.2.2)
+    cancan (1.6.10)
     ckeditor (4.1.0)
       mime-types
       orm_adapter (~> 0.5.0)
@@ -176,6 +177,7 @@ PLATFORMS
 DEPENDENCIES
   ancestry!
   autonumeric-rails
+  cancan
   ckeditor
   cocoon
   coffee-rails (~> 4.0.0)

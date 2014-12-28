@@ -17,6 +17,7 @@ gem 'spring',        group: :development
 gem 'cocoon'  
 gem 'pg'
 gem 'devise'
+gem "cancan"
 gem 'ancestry', github: 'stefankroes/ancestry'
 gem 'paperclip'
 gem 'mini_magick'
