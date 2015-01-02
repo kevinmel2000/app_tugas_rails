@@ -1,0 +1,36 @@
+<fieldset>
+	<legend><i class="fa fa-angle-right"></i> User Personal</legend>
+	<div class="form-group">
+		<label class="col-md-4 control-label" for="example-chosen">Username</label>
+		<div class="col-md-6">
+			<%= f.text_field :username, class: 'form-control', required: true, placeholder: 'Username' %>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-md-4 control-label" for="example-chosen">Email</label>
+		<div class="col-md-6">
+			<%= f.email_field :email, class: 'form-control', required: true, placeholder: 'Youremail@mail.com' %>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-md-4 control-label" for="example-chosen">Password</label>
+		<div class="col-md-6">
+			<% if @validatable %>
+			<em>(<%= @minimum_password_length %> characters minimum)</em>
+			<% end %><br />
+			<%= f.password_field :password, class: 'form-control', placeholder: 'Password' %>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-md-4 control-label" for="example-chosen">Password Konfirmasi</label>
+		<div class="col-md-6">
+			<%= f.password_field :password_confirmation, class: 'form-control', placeholder: 'Password confirmation' %>
+		</div>
+	</div>
+	<%= f.fields_for(:profile) do |profile| %>
+		<%= render partial: 'profile_form', locals: {profile: profile} %>
+	<% end %>
+	<%= f.fields_for(:address) do |address| %>
+		<%= render partial: 'address_form', locals: {address: address} %>
+	<% end %>
+</fieldset>

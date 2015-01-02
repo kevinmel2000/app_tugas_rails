@@ -1,0 +1,21 @@
+<div id="page-content">
+	<%= render 'backend/shared/title_top' %>
+	<div class="block">
+		<div class="block-title">
+			<div class="block-options pull-right">
+				<%= link_to backend_users_path, class: "btn btn-alt btn-sm btn-default toggle-bordered" do %>
+				List Users
+				<% end %>
+			</div>
+			<h2><strong>Product</strong> New</h2>
+		</div>
+		<%= form_for [:backend, @user], url: backend_users_path(@user), method: 'PUT', :html => {:class => "form-horizontal form-bordered"} do |f| %>
+			<%= render partial: 'form', locals: {f: f} %>
+			<div class="form-group form-actions">
+				<div class="col-md-8 col-md-offset-4">
+					<%= submit_tag :save, class: 'btn btn-primary btn-sm' %>
+				</div>
+			</div>
+		<% end %>
+	</div>
+</div>

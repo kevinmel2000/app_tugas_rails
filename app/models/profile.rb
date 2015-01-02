@@ -1,5 +1,6 @@
 class Profile < ActiveRecord::Base
-	# Address polymorpics addressable -> 'address','province',' city','postcode'
+	belongs_to :users
+
 	has_attached_file :avatar,
     :styles => {
       :thumb  => "50x50#",
