@@ -14,13 +14,14 @@ class User < ActiveRecord::Base
 
   def admin?
     self.type == 'Admin'
-  end  
+  end
 
   def member?
     self.type == 'Member'
   end
 
   protected 
+
     def after_initialized
       self.profile = Profile.new if self.profile.blank?
       self.address = Address.new if self.address.blank?
