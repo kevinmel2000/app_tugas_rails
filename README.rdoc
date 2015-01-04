@@ -12,13 +12,13 @@ Anggota
 
 == INDIVIDUAL TASK TEAM
 - Ratno Sidik 
-	- <tt>Membuat Fitur Product gadget (berdasarkan product_id)</tt>
+	- Membuat Fitur Product <tt>gadget</tt> (berdasarkan product_id)
 - Fathan Rohman
-	- <tt>Membuat Fitur Product Property (berdasarkan product_id)</tt>
+	- Membuat Fitur Product <tt>Property</tt> (berdasarkan product_id)
 - Yogi Mardillah
-	- <tt>Membuat Fitur Product Bike (berdasarkan product_id)</tt>
+	- Membuat Fitur Product <tt>Bike</tt> (berdasarkan product_id)
 - Israj Alwan Haliri
-	- <tt>Membuat Fitur Product Car (berdasarkan product_id)</tt>
+	- Membuat Fitur Product <tt>Car</tt> (berdasarkan product_id)
 
 
 == DESCRIPTION
