@@ -1,10 +1,9 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  database: dari_guru_dev
   pool: 5
-  username: topan
-  password: develop123
+  # username: topan
+  # password: develop123
 
 development:
   <<: *default
