@@ -62,7 +62,4 @@ MINGGU KE 9
 Case Study next week <tt>(New Task)</tt>
 1. gem Cancan buat manage hak akses setiap usernya (admin: all - member di bagi berdasarkan hak aksesnya)
 2. pelajari lagi yang member user
-3. address -> 
-				(addresable_id, addressable_type) polymorphic ke 
-					- profile 
-          - products
+3. address -> (addresable_id, addressable_type) polymorphic ke (profile & product)
