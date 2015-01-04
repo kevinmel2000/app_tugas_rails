@@ -38,39 +38,39 @@ class Backend::UsersController < Backend::ApplicationBackendController
 	end
 
 	private
-	def draw_passwords
-		if params[:user] && params[:user][:password].blank?
-			params[:user].delete("password")
-			params[:user].delete("password_confirmation")
+		def draw_passwords
+			if params[:user] && params[:user][:password].blank?
+				params[:user].delete("password")
+				params[:user].delete("password_confirmation")
+			end
 		end
-	end
 
-	def users_params
-		params.require(:user).permit(:id, :username, :email, :password, :password_confirmation, 
-																	profile_attributes: [
-																		:id,
-																		:full_name,
-																		:gender,
-																		:birthday,
-																		:phone,
-																		:avatar,
-																		:user_id,
-																		:_destroy
-																		],
-																	address_attributes: [
-																		:id,
-																		:country,
-																		:province,
-																		:city,
-																		:address,
-																		:postcode,
-																		:user_id,
-																		:_destroy
-																		])
-	end
+		def users_params
+			params.require(:user).permit(:id, :username, :email, :password, :password_confirmation, 
+																		profile_attributes: [
+																			:id,
+																			:full_name,
+																			:gender,
+																			:birthday,
+																			:phone,
+																			:avatar,
+																			:user_id,
+																			:_destroy
+																			],
+																		address_attributes: [
+																			:id,
+																			:country,
+																			:province,
+																			:city,
+																			:address,
+																			:postcode,
+																			:user_id,
+																			:_destroy
+																			])
+		end
 
-	def sex
-		sex = ['Laki-Laki', 'Perempuan']
-		@sex = sex.map{|sex| [sex, sex]}
-	end
+		def sex
+			sex = ['Laki-Laki', 'Perempuan']
+			@sex = sex.map{|sex| [sex, sex]}
+		end
 end
