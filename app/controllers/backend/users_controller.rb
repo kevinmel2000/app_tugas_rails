@@ -3,7 +3,7 @@ class Backend::UsersController < Backend::ApplicationBackendController
 	before_filter :draw_passwords, only: :update
 
 	def index
-		@users = User.all
+		@users = User.where(:type => 'member')
 	end
 
 	def new

@@ -1,0 +1,38 @@
+<div id="page-content">
+	<div class="block full">
+		<div class="block-title">
+			<div class="block-options pull-right">
+				<%= link_to new_backend_web_setting_path do %>
+					<div class="btn btn-success">
+						New Web Setting
+					</div>
+				<% end %>
+			</div>
+			<h2><strong>Web</strong> setting</h2>
+		</div>
+		<div class="table-responsive">
+			<table id="example-datatable" class="table table-vcenter table-condensed table-bordered">
+				<thead>
+					<tr>
+						<th class="text-center">No</th>
+						<th>Web Setting</th>
+						<th class="text-center">Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @web_settings.each_with_index do |web_setting,index| %>
+					<tr>
+						<td class="text-center"><%= index + 1 %></td>
+						<td><a href="javascript:void(0)"><%= web_setting.title %></a></td>
+						<td class="text-center">
+							<div class="btn-group">
+								<%= link_to 'Edit', edit_backend_web_setting_path(web_setting), class: 'btn btn-default btn-sm' %> 
+							</div>
+						</td>
+					</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

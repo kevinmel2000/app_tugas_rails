@@ -789,7 +789,7 @@ h3{
 /*section news*/
 
 .news{
-	background: url(background.png) fixed;
+	background: url(../background.png) fixed;
 	/*margin-bottom: 20px;*/
 	padding-bottom: 40px;
 }

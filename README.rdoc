@@ -1,5 +1,31 @@
-== DESCRIPTION
+== TEAM PROJECT
 
+Project Manager
+- Alam Topan
+
+Anggota
+- Ratno Sidik
+- Fathan Rohman
+- Yogi Mardillah
+- Israj Alwan Haliri
+
+
+== INDIVIDUAL TASK TEAM
+- Ratno Sidik 
+	- Membuat Fitur Product <tt>gadget</tt> (berdasarkan product_id)
+- Fathan Rohman
+	- Membuat Fitur Product <tt>Property</tt> (berdasarkan product_id)
+- Yogi Mardillah
+	- Membuat Fitur Product <tt>Bike</tt> (berdasarkan product_id)
+- Israj Alwan Haliri
+	- Membuat Fitur Product <tt>Car</tt> (berdasarkan product_id)
+
+
+== DESCRIPTION
+MINGGU KE 1
+MINGGU KE 2
+MINGGU KE 3
+MINGGU KE 4
 MINGGU KE 5
 - CRUD
  
@@ -25,10 +51,15 @@ province
 
 MINGGU KE 6
 Case Study next week:
-
 1. Ubah semua root ke backend
 2. gem 'devise'  <tt>installation, generate file, view devise => user</tt>
 3. gem 'omniauth' 
 4. gem 'omniauth-facebook'
 5. user <tt>has one profile => 'Full_name','avatar','gender','birthday','phone'</tt>
 6. profile <tt>Address polymorpics addressable -> 'address','province',' city','postcode'</tt>
+
+MINGGU KE 9
+Case Study next week <tt>(New Task)</tt>
+1. gem Cancan buat manage hak akses setiap usernya (admin: all - member di bagi berdasarkan hak aksesnya)
+2. pelajari lagi yang member user
+3. address -> (addresable_id, addressable_type) polymorphic ke (profile & product)

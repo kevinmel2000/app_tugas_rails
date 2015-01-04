@@ -1,0 +1,12 @@
+<div class="col-sm-12">
+	<%= f.fields_for :galleries do |g| %>
+	<%= render 'gallery_fields', f: g %>
+	<% end %>
+
+	<div class="links">
+		<%= link_to_add_association f, :galleries, partial: 'gallery_fields', class: "btn btn-success float-right" do %>
+		<i class="fa fa-picture-o"></i>
+		<span>Add Image</span>
+		<% end %>
+	</div>
+</div>

@@ -15,9 +15,7 @@ Rails.application.routes.draw do
   get 'sign_up',      to: 'publics#sign_up',        as: 'sign_up'
 
   namespace :backend do
-    get '/', to: 'home#index'
-    # devise_for :admins, :controllers => { sessions: "backend/admins/sessions" }
-    
+    get '/', to: 'home#index'  
     resources :users
     resources :categories
     resources :galleries
@@ -25,5 +23,6 @@ Rails.application.routes.draw do
     resources :products
     resources :addresses
     resources :profiles
+    resources :web_settings
   end
 end
