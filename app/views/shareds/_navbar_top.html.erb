@@ -40,7 +40,7 @@
 							<%= link_to 'Edit Profile', edit_user_registration_path %>
 						</li>
 						<li class="">
-							<%= link_to 'Logout', destroy_user_session_path, method: :delete %>        
+							<%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'sign-in-link' %>        
 						</li>
 					<% else %>
 						<li class="#">
@@ -49,7 +49,7 @@
 							</a>          
 						</li>
 						<li class="">
-							<a href="#" class="sign-up-link" data-toggle="modal" data-target="#signup">
+							<a href="#" class="btn-primary sign-up-link" data-toggle="modal" data-target="#signup">
 								DAFTAR
 							</a>          
 						</li>
