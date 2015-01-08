@@ -11,44 +11,60 @@
 		</div>
 		<%= form_for [:backend, @product], :html => {:class => "form-horizontal form-bordered"} do |f| %>
 		<fieldset>
-			<div class="form-group">
-				<label class="col-md-4 control-label" for="example-chosen">Status</label>
-				<div class="col-md-1">
-					<%= f.check_box :status, class: 'form-control' %>
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">Product</div>
+					<div class="panel-body">
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="example-chosen">Status</label>
+							<div class="col-md-1">
+								<%= f.check_box :status, class: 'form-control' %>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="example-chosen">Category</label>
+							<div class="col-md-6">
+								<div class="input-group">
+									<%= f.select :category_id, options_for_select(products_category_options, @product.category_id),{prompt: 'Select Category...'}, class: 'form-control' %>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="example-chosen">Title</label>
+							<div class="col-md-6">
+								<div class="input-group">
+									<%= f.text_field :title, class: 'form-control', placeholder: 'Title' %>
+									<span class="input-group-addon"><i class="gi gi-list"></i></span>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="example-chosen">Description</label>
+							<div class="col-md-8">
+								<%= f.cktext_area :description, class: 'form-control txtarea', placeholder: 'Description' %>
+							</div>
+						</div>			
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="example-chosen">Price</label>
+							<div class="col-md-6">
+								<%= f.text_field :price, data: {autonumeric: true}, class: 'form-control', placeholder: 'Price' %>
+							</div>
+						</div>
+					</div>
 				</div>
-			</div>
-			<div class="form-group">
-				<label class="col-md-4 control-label" for="example-chosen">Category</label>
-				<div class="col-md-6">
-					<div class="input-group">
-						<%= f.select :category_id, options_for_select(products_category_options, @product.category_id),{prompt: 'Select Category...'}, class: 'form-control' %>
+				<div class="panel panel-default">
+					<div class="panel-heading">Product Details</div>
+					<div class="panel-body">
+						
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">Product Image</div>
+					<div class="panel-body">
+						<%= render partial: 'form_gallery', locals: {f: f} %>
 					</div>
 				</div>
 			</div>
-			<div class="form-group">
-				<label class="col-md-4 control-label" for="example-chosen">Title</label>
-				<div class="col-md-6">
-					<div class="input-group">
-						<%= f.text_field :title, class: 'form-control', placeholder: 'Title' %>
-						<span class="input-group-addon"><i class="gi gi-list"></i></span>
-					</div>
-				</div>
-			</div>
-			<div class="form-group">
-				<label class="col-md-4 control-label" for="example-chosen">Description</label>
-				<div class="col-md-8">
-					<%= f.cktext_area :description, class: 'form-control txtarea', placeholder: 'Description' %>
-				</div>
-			</div>			
-			<div class="form-group">
-				<label class="col-md-4 control-label" for="example-chosen">Price</label>
-				<div class="col-md-6">
-					<%= f.text_field :price, data: {autonumeric: true}, class: 'form-control', placeholder: 'Price' %>
-				</div>
-			</div>
-
-			<%= render partial: 'form_gallery', locals: {f: f} %>
-
 		</fieldset>
 		<div class="form-group form-actions">
 			<div class="col-md-8 col-md-offset-4">

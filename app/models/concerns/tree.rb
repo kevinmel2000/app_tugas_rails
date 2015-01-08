@@ -30,5 +30,4 @@ module Tree
       arr
     end
   end
-
 end

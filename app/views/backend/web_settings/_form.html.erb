@@ -18,12 +18,14 @@
 						<div class="form-group">
 							<label class="col-md-4 control-label" for="example-chosen">Favicon</label>
 							<div class="col-md-6">
+								<%#= image_tag @web_settings.favicon.url(:medium), class: "pav-icon" %>
 								<%= f.file_field :favicon, class: 'form-control' %>
 							</div>
 						</div>
 						<div class="form-group">
 							<label class="col-md-4 control-label" for="example-chosen">Logo</label>
 							<div class="col-md-6">
+								<%#= image_tag @web_settings.logo.url(:medium) %>
 								<%= f.file_field :logo, class: 'form-control' %>
 							</div>
 						</div>
