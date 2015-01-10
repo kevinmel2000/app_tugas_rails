@@ -45,6 +45,27 @@ class Backend::ProductsController < Backend::ApplicationBackendController
 																	        :galleriable_id,
 																	        :galleriable,
 																	        :_destroy
+																	      ],
+																	      product_property: [
+																	      	:id,
+																	      	:building_area,
+																					:surface_area,
+																					:bathroom,
+																					:bedroom,
+																					:certificate,
+																					:interior,
+																					:electrical_power,
+																					:birth_year,
+																					:_destroy
+																	      ],
+																	      address_attributes: [
+																	      	:id,
+																	      	:province,
+																					:city,
+																					:address,
+																					:postcode,
+																					:country,
+																					:_destroy
 																	      ])
 		end
 

@@ -1,4 +1,5 @@
 class Backend::ProductPropertiesController < Backend::ApplicationBackendController
+	
 	def index
 		@productproperties = ProductProperty.all
 	end
@@ -32,16 +33,32 @@ class Backend::ProductPropertiesController < Backend::ApplicationBackendControll
 
 	private
 		def productproperty_params 
-			params.require(:product_property).permit(
-				:id, 
-				:building_area,
-		    :surface_area,
-		    :bathroom,
-		    :bedroom,
-		    :certificate,
-		    :interior,
-		    :electrical_power,
-		    :birth_year
-			)
+			params.require(:product_property).permit(:id, :building_area, :surface_area, :bathroom, :bedroom, :certificate, :interior, :electrical_power, :birth_year, :parent_id,
+																						    product_attributes: [
+																						    	:id,
+																						    	:title,
+																						    	:description,
+																						    	:price,
+																						    	:status,
+																						    	:_destroy
+																						    ],
+																						    addresses_attributes: [
+																					      	:id,
+																					      	:province,
+																									:city,
+																									:address,
+																									:postcode,
+																									:country,
+																									:_destroy
+																					      ],
+																						    galleries_attributes: [
+																					        :id,
+																					        :title,
+																					        :file,
+																					        :galleriable_type,
+																					        :galleriable_id,
+																					        :galleriable,
+																					        :_destroy
+																					      ])
 		end
 end
