@@ -12,6 +12,11 @@ User.create({
 	password: 12345678,
 	password_confirmation: 12345678,
 	type: 'Admin'
-	})
+})
+
+WebSetting.create({
+	title: 'Market Place'
+})
+
 
 puts 'DONE'

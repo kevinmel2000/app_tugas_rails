@@ -46,7 +46,7 @@ class Backend::ProductsController < Backend::ApplicationBackendController
 																	        :galleriable,
 																	        :_destroy
 																	      ],
-																	      product_property: [
+																	      product_property_attributes: [
 																	      	:id,
 																	      	:building_area,
 																					:surface_area,
@@ -56,6 +56,7 @@ class Backend::ProductsController < Backend::ApplicationBackendController
 																					:interior,
 																					:electrical_power,
 																					:birth_year,
+																					:product_id,
 																					:_destroy
 																	      ],
 																	      address_attributes: [
