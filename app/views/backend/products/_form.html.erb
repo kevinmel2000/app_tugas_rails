@@ -56,7 +56,7 @@
 					<div class="panel-heading">Product Details</div>
 					<div class="panel-body">
 						<%= f.fields_for(:product_property) do |product_property| %>
-							<%= render partial: 'product_property_form', locals: {f: product_property} %>
+							<%= render partial: 'product_property_form', locals: { product_property: product_property } %>
 						<% end %>
 					</div>
 				</div>

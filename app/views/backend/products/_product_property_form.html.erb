@@ -1,47 +1,42 @@
-<div class="panel panel-default">
-	<div class="panel-heading">Product Details Property</div>
-	<div class="panel-body">
-		<div class="form-group">
-			<label class="col-md-4 control-label" for="example-chosen">Luas bangunan</label>
-			<div class="col-md-6">
-				<%= f.text_field :building_area, class: 'form-control', placeholder: 'Luas Bangunan' %>
-			</div>
-		</div>
-		<div class="form-group">
-			<label class="col-md-4 control-label" for="example-chosen">Luas tanah</label>
-			<div class="col-md-6">
-				<%= f.text_field :surface_area, class: 'form-control', placeholder: 'Luas tanah' %>
-			</div>
-		</div>
-		<div class="form-group">
-			<label class="col-md-4 control-label" for="example-chosen">kamar mandi</label>
-			<div class="col-md-6">
-				<%= f.text_field :bathroom, class: 'form-control', placeholder: 'Kamar mandi' %>
-			</div>
-		</div>
-		<div class="form-group">
-			<label class="col-md-4 control-label" for="example-chosen">Kamar tidur</label>
-			<div class="col-md-6">
-				<%= f.text_field :bedroom, class: 'form-control', placeholder: 'kamar tidur' %>
-			</div>
-		</div>
-		<div class="form-group">
-			<label class="col-md-4 control-label" for="example-chosen">Sertifikat bangunan</label>
-			<div class="col-md-6">
-				<%= f.text_field :certificate, class: 'form-control', placeholder: 'Sertifikat bangunan' %>
-			</div>
-		</div>
-		<div class="form-group">
-			<label class="col-md-4 control-label" for="example-chosen">Daya listrik</label>
-			<div class="col-md-6">
-				<%= f.text_field :electrical_power, class: 'form-control' %>
-			</div>
-		</div>
-		<div class="form-group">
-			<label class="col-md-4 control-label" for="example-chosen">Tahun didirikan</label>
-			<div class="col-md-6">
-				<%= f.text_field :birth_year, class: 'form-control', placeholder: 'Tahun didirikan' %>
-			</div>
-		</div>
+<div class="form-group">
+	<label class="col-md-4 control-label" for="example-chosen">Luas bangunan</label>
+	<div class="col-md-6">
+		<%= product_property.text_field :building_area, class: 'form-control', placeholder: 'Luas Bangunan' %>
+	</div>
+</div>
+<div class="form-group">
+	<label class="col-md-4 control-label" for="example-chosen">Luas tanah</label>
+	<div class="col-md-6">
+		<%= product_property.text_field :surface_area, class: 'form-control', placeholder: 'Luas tanah' %>
+	</div>
+</div>
+<div class="form-group">
+	<label class="col-md-4 control-label" for="example-chosen">kamar mandi</label>
+	<div class="col-md-6">
+		<%= product_property.text_field :bathroom, class: 'form-control', placeholder: 'Kamar mandi' %>
+	</div>
+</div>
+<div class="form-group">
+	<label class="col-md-4 control-label" for="example-chosen">Kamar tidur</label>
+	<div class="col-md-6">
+		<%= product_property.text_field :bedroom, class: 'form-control', placeholder: 'kamar tidur' %>
+	</div>
+</div>
+<div class="form-group">
+	<label class="col-md-4 control-label" for="example-chosen">Sertifikat bangunan</label>
+	<div class="col-md-6">
+		<%= product_property.text_field :certificate, class: 'form-control', placeholder: 'Sertifikat bangunan' %>
+	</div>
+</div>
+<div class="form-group">
+	<label class="col-md-4 control-label" for="example-chosen">Daya listrik</label>
+	<div class="col-md-6">
+		<%= product_property.text_field :electrical_power, class: 'form-control' %>
+	</div>
+</div>
+<div class="form-group">
+	<label class="col-md-4 control-label" for="example-chosen">Tahun didirikan</label>
+	<div class="col-md-6">
+		<%= product_property.text_field :birth_year, class: 'form-control', placeholder: 'Tahun didirikan' %>
 	</div>
 </div>

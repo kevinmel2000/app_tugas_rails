@@ -37,16 +37,7 @@ class Backend::ProductsController < Backend::ApplicationBackendController
     
 		def product_params
 			params.require(:product).permit(:id, :title, :description, :price, :category_id, :status, :user_id, :parent_id, 
-																				galleries_attributes: [
-																	        :id,
-																	        :title,
-																	        :file,
-																	        :galleriable_type,
-																	        :galleriable_id,
-																	        :galleriable,
-																	        :_destroy
-																	      ],
-																	      product_property_attributes: [
+																				product_property_attributes: [
 																	      	:id,
 																	      	:building_area,
 																					:surface_area,
@@ -58,6 +49,15 @@ class Backend::ProductsController < Backend::ApplicationBackendController
 																					:birth_year,
 																					:product_id,
 																					:_destroy
+																	      ],
+																				galleries_attributes: [
+																	        :id,
+																	        :title,
+																	        :file,
+																	        :galleriable_type,
+																	        :galleriable_id,
+																	        :galleriable,
+																	        :_destroy
 																	      ],
 																	      address_attributes: [
 																	      	:id,

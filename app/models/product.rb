@@ -12,6 +12,8 @@ class Product < ActiveRecord::Base
 
 	belongs_to :category, foreign_key: 'category_id'
 
+	after_initialize :after_initialized
+
 	def verified
 		if self.status == true
 			"<div class='label label-success'>ACTIVE</div>".html_safe
@@ -19,4 +21,9 @@ class Product < ActiveRecord::Base
 			"<div class='label label-danger'>NONAKTIVE</div>".html_safe
 		end
 	end
+
+	def after_initialized
+    self.product_property = ProductProperty.new if self.product_property.blank?
+    self.address = Address.new if self.address.blank?
+  end
 end
