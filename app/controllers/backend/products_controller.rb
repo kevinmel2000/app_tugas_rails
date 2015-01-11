@@ -59,6 +59,16 @@ class Backend::ProductsController < Backend::ApplicationBackendController
 																	        :galleriable,
 																	        :_destroy
 																	      ],
+																	      bike_property_attributes: [
+																	        :id,
+																	        :brand,
+																	        :manufacture,
+																	        :bike_type,
+																	        :color,
+																	        :condition,
+																	        :product_id,
+																	        :_destroy
+																	      ],
 																	      address_attributes: [
 																	      	:id,
 																	      	:province,
