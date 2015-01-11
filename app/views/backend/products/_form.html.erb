@@ -53,7 +53,7 @@
 					</div>
 				</div>
 				<div class="panel panel-default">
-					<div class="panel-heading">Product Details</div>
+					<div class="panel-heading">Property Details</div>
 					<div class="panel-body">
 						<%= f.fields_for(:product_property) do |product_property| %>
 							<%= render partial: 'product_property_form', locals: { product_property: product_property } %>
@@ -65,6 +65,14 @@
 					<div class="panel-body">
 						<%= f.fields_for(:car) do |product_car| %>
 							<%= render partial: 'product_car', locals: { product_car: product_car } %>
+						<% end %>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">Gadget Details</div>
+					<div class="panel-body">
+						<%= f.fields_for(:gadget) do |gadget| %>
+							<%= render partial: 'product_gadget_form', locals: { gadget: gadget } %>
 						<% end %>
 					</div>
 				</div>

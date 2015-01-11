@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sku: 
+  shipping_weight: MyString
+  waranty: MyString
+  color: MyString
+  processor: 
+  Os: MyString
+  sim: MyString
+  memory: MyString
+  camera: MyString
+  dimension: MyString
+  display: MyString
+  network: MyString
+  battery: MyString
+
+two:
+  sku: 
+  shipping_weight: MyString
+  waranty: MyString
+  color: MyString
+  processor: 
+  Os: MyString
+  sim: MyString
+  memory: MyString
+  camera: MyString
+  dimension: MyString
+  display: MyString
+  network: MyString
+  battery: MyString

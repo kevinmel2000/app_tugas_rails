@@ -7,6 +7,9 @@ class Product < ActiveRecord::Base
 	has_one :car
 	accepts_nested_attributes_for :car
 
+	has_one :gadget
+	accepts_nested_attributes_for :gadget
+
 	has_one :address, as: :addressable, dependent: :destroy
 	accepts_nested_attributes_for :address, reject_if: :all_blank, allow_destroy: true
 
@@ -28,6 +31,7 @@ class Product < ActiveRecord::Base
 	def after_initialized
     self.product_property = ProductProperty.new if self.product_property.blank?
     self.car = Car.new if self.car.blank?
+    self.gadget = Gadget.new if self.gadget.blank?
     self.address = Address.new if self.address.blank?
   end
 end

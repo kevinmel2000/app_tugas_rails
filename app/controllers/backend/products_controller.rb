@@ -62,6 +62,23 @@ class Backend::ProductsController < Backend::ApplicationBackendController
 																	      	:fuel,
 																	      	:product_id
 																	      ],
+																	      gadget_attributes: [
+																	        :id,
+																	        :sku,
+																	        :shipping_weight,
+																	        :waranty,
+																	        :color,
+																	        :processor,
+																	        :Os,
+																	        :sim,
+																	        :memory,
+																	        :camera,
+																	        :dimension,
+																	        :display,
+																	        :network,
+																	        :battery,
+																	        :_destroy
+																	      ],
 																				galleries_attributes: [
 																	        :id,
 																	        :title,
