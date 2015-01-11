@@ -61,6 +61,14 @@
 					</div>
 				</div>
 				<div class="panel panel-default">
+					<div class="panel-heading">Gadget Details</div>
+					<div class="panel-body">
+						<%= f.fields_for(:gadget) do |gadget| %>
+							<%= render partial: 'product_gadget_form', locals: { gadget: gadget } %>
+						<% end %>
+					</div>
+				</div>
+				<div class="panel panel-default">
 					<div class="panel-heading">Address Details</div>
 					<div class="panel-body">
 						<%= f.fields_for(:address) do |address| %>
