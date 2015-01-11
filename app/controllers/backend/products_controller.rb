@@ -50,6 +50,35 @@ class Backend::ProductsController < Backend::ApplicationBackendController
 																					:product_id,
 																					:_destroy
 																	      ],
+																	      car_attributes: [
+																	      	:id,
+																	      	:transmission,
+																	      	:kilometer,
+																	      	:seat,
+																	      	:door,
+																	      	:production_year,
+																	      	:number_plate,
+																	      	:engine,
+																	      	:fuel,
+																	      	:product_id
+																	      ],
+																	      gadget_attributes: [
+																	        :id,
+																	        :sku,
+																	        :shipping_weight,
+																	        :waranty,
+																	        :color,
+																	        :processor,
+																	        :Os,
+																	        :sim,
+																	        :memory,
+																	        :camera,
+																	        :dimension,
+																	        :display,
+																	        :network,
+																	        :battery,
+																	        :_destroy
+																	      ],
 																				galleries_attributes: [
 																	        :id,
 																	        :title,

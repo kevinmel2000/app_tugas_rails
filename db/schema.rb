@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20150111050149) do
     t.string   "addressable_type"
   end
 
+<<<<<<< HEAD
   create_table "bike_properties", force: true do |t|
     t.string   "brand"
     t.string   "color"
@@ -38,6 +39,21 @@ ActiveRecord::Schema.define(version: 20150111050149) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "product_id"
+=======
+  create_table "cars", force: true do |t|
+    t.string   "transmission"
+    t.string   "kilometer"
+    t.string   "seat"
+    t.string   "door"
+    t.string   "color"
+    t.string   "production_year"
+    t.string   "number_plate"
+    t.string   "engine"
+    t.string   "fuel"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "product_id"
+>>>>>>> 54656678bc864ddc3a4762e94d563afc381ea3cc
   end
 
   create_table "categories", force: true do |t|
@@ -62,6 +78,25 @@ ActiveRecord::Schema.define(version: 20150111050149) do
 
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
+
+  create_table "gadgets", force: true do |t|
+    t.string   "sku"
+    t.string   "shipping_weight"
+    t.string   "waranty"
+    t.string   "color"
+    t.string   "processor"
+    t.string   "Os"
+    t.string   "sim"
+    t.string   "memory"
+    t.string   "camera"
+    t.string   "dimension"
+    t.string   "display"
+    t.string   "network"
+    t.string   "battery"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "product_id"
+  end
 
   create_table "galleries", force: true do |t|
     t.string   "title"

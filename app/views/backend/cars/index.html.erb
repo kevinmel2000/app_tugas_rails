@@ -1,0 +1,55 @@
+<div id="page-content">
+    <div class="block full">
+        <div class="block-title">
+            <div class="block-options pull-right">
+                <%= link_to new_backend_car_path do %>
+                <div class="btn btn-success">
+                    New Data
+                </div>
+                <% end %>
+            </div>
+            <h2><strong>Cars</strong> lists</h2>
+        </div>
+        <div class="table-responsive">
+            <table id="example-datatable" class="table table-vcenter table-condensed table-bordered">
+                <thead>
+                    <tr>
+                        <th class="text-center">No</th>
+                        <td>Transmission</td>
+                        <td>Kilometer</td>
+                        <td>Seat</td>
+                        <td>Door</td>
+                        <td>Color</td>
+                        <td>Prodution Year</td>
+                        <td>Number Plate</td>
+                        <td>Engine</td>
+                        <td>Fuel</td>
+                        <th class="text-center">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% @cars.each_with_index do |car,index| %>
+                    <tr>
+                        <td class="text-center"><%= index + 1 %></td>
+                        <td><a href="javascript:void(0)"><%= car.transmission %></a></td>
+                        <td><%= car.kilometer %></td>
+                        <td><%= car.seat %></td>
+                        <td><%= car.door %></td>
+                        <td><%= car.color %></td>
+                        <td><%= car.production_year %></td>
+                        <td><%= car.number_plate %></td>
+                        <td><%= car.engine %></td>
+                        <td><%= car.fuel %></td>
+                        <td class="text-center">
+                            <div class="btn-group">
+                                <%= link_to 'Edit', edit_backend_car_path(car), class: 'btn btn-default btn-sm' %> 
+                                <%= link_to 'Delete', backend_car_path(car), method: 'delete', class: 'btn btn-danger btn-sm', locals: {resource: car, confirmation: "#{car.production_year} will be deleted, are you sure ?"}%> 
+                            </div>
+                        </td>
+                    </tr>
+                    <% end %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

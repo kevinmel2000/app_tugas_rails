@@ -39,4 +39,9 @@ module ApplicationHelper
 
     html.html_safe
   end
+
+  def transmission
+    @transmission = ['auto','semi','semi auto']
+  end
+
 end

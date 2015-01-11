@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  transmission: MyString
+  kilometer: MyString
+  seat: MyString
+  door: MyString
+  color: MyString
+  production_year: MyString
+  number_plate: MyString
+  engine: MyString
+  fuel: MyString
+
+two:
+  transmission: MyString
+  kilometer: MyString
+  seat: MyString
+  door: MyString
+  color: MyString
+  production_year: MyString
+  number_plate: MyString
+  engine: MyString
+  fuel: MyString
