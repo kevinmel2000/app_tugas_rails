@@ -2,15 +2,15 @@
 	<div class="carousel-top">
 		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 			<ol class="carousel-indicators">
-				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-				<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-				<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+				<% @slider.galleries.each_with_index do |f, index| %>
+					<li data-target="#carousel-example-generic" data-slide-to="<%= index %>" class="<%= 'active' if index == 1 %>">
+					</li>
+				<% end %>
 			</ol>
 			<div class="carousel-inner">
-				<%= (1..4).each do |f| %>
-				<div class="item <%= 'active' if f == 1 %>">
-					<%= image_tag 'home-banners4.jpg', alt: 'Sukabumi Property' %>
+				<% @slider.galleries.each_with_index do |f, index| %>
+				<div class="item <%= 'active' if index == 1 %>">
+					<%= image_tag f.file.url %>
 				</div>
 				<% end %>
 			</div>

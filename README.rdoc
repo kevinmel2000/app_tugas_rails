@@ -9,57 +9,43 @@ Anggota
 - Yogi Mardillah
 - Israj Alwan Haliri
 
+== TASK NEXT WEEK
 
-== INDIVIDUAL TASK TEAM
-- Ratno Sidik 
-	- Membuat Fitur Product <tt>gadget</tt> (berdasarkan product_id)
-- Fathan Rohman
-	- Membuat Fitur Product <tt>Property</tt> (berdasarkan product_id)
-- Yogi Mardillah
-	- Membuat Fitur Product <tt>Bike</tt> (berdasarkan product_id)
-- Israj Alwan Haliri
-	- Membuat Fitur Product <tt>Car</tt> (berdasarkan product_id)
+RATNO
+- Page Home First (Buat Dinamis Iklan Terbaru)
 
 
-== DESCRIPTION
-MINGGU KE 1
-MINGGU KE 2
-MINGGU KE 3
-MINGGU KE 4
-MINGGU KE 5
-- CRUD
- 
-TUGAS
-product
-- title: string
-- description: text
-- price: decimal
-- category_id: integer
-- status: boolean
-- user_id : integer
-category
-- name : string
-- ancestry : <tt>gem ancestry</tt>
-gallery
-- title : string
-- file : attachment <tt>gem paperclip</tt>
-- galleriable_type : string
-- galleriable_id : integer
-province
-- nama: string
-- ancestry : <tt>gem ancestry</tt>
+FATHAN
+- Page Catalog Second (Buat Dinamis List Iklan + add fitur pagination on list)
+- Coba-coba select onchange catalog
 
-MINGGU KE 6
-Case Study next week:
-1. Ubah semua root ke backend
-2. gem 'devise'  <tt>installation, generate file, view devise => user</tt>
-3. gem 'omniauth' 
-4. gem 'omniauth-facebook'
-5. user <tt>has one profile => 'Full_name','avatar','gender','birthday','phone'</tt>
-6. profile <tt>Address polymorpics addressable -> 'address','province',' city','postcode'</tt>
 
-MINGGU KE 9
-Case Study next week <tt>(New Task)</tt>
-1. gem Cancan buat manage hak akses setiap usernya (admin: all - member di bagi berdasarkan hak aksesnya)
-2. pelajari lagi yang member user
-3. address -> (addresable_id, addressable_type) polymorphic ke (profile & product)
+YOGI
+-Buat Select helper untuk kebutuhan sistem berikut yang harus dibuat:
+- ++ untuk product GADGET & ELEKTRONIK
+- color (ex: black, brown, red, yellow, dll) 
+- sim (ex: one sim, dual sim, tree simm)
+- camera (ex: 1..32 Megapixel)
+++ untuk product PROPERTY
+- Kamar Mandi (ex: 1,2,3,4,5,6,7,8,9 ...n)
+- Kamar Tidur (ex: 1,2,3,4,5,6,7,8,9 ...n)
+- Sertifikat (ex: SHM(Sertifikat Hak Milik) - HGB(Hak Guna Bangun) - Lainnya(PPJB,Girik,Adat,dll))
+
+
+ISRAJ
+- ++ untuk product BIKE
+- tambahin field berikut supaya bisa jadi crud di bike terus terapin select helpernya samain kaya yang di car.
+- (transmission)
+- (kilometer)
+- (production_year)
+- (number_plate)
+- (full_tank)
+
+- ++ untuk product CAR
+- Transimission (Manual, Semi Auto, Automatis)
+- Seat (ex: 1,2,3,4,5...n)
+- door (ex: 1,2,3,4,5...n)
+- year (ex: 1945 ... 2015 {Looping data})
+- engine (ex: 4 slinder, 8 slinder)
+
+ <%= ----------------------- GOOD LUCK GAN -------------------- %>

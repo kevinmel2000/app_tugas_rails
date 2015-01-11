@@ -1,12 +1,16 @@
 class Backend::ProductsController < Backend::ApplicationBackendController
+	add_breadcrumb "Home", :backend_path
+  add_breadcrumb "Products", :backend_products_path
+
 	helper_method :products_category_options 
 
 	def index
-		# @articles = Article.order(created_at: :desc)
 		@products = Product.latest
 	end
 
 	def new
+		add_breadcrumb "New", :new_backend_product_path
+
 		@product = Product.new
 	end
 
