@@ -29,4 +29,8 @@ gem 'inherited_resources'
 gem 'byebug'
 gem 'friendly_id'
 gem 'breadcrumbs_on_rails'
+<<<<<<< HEAD
 gem 'kaminari'
+=======
+>>>>>>> a28afe84e59feaa23b2e149af75f05a7c2362c63
+>>>>>>> a9e7d12c03cf010315aacc8287e1455c6568c9ab

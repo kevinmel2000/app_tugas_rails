@@ -1,8 +1,9 @@
 class Product < ActiveRecord::Base
 
 	extend FriendlyId
-  friendly_id :title, use: [:slugged, :finders]
-  
+
+	friendly_id :title, use: [:slugged, :finders]
+
 	scope :latest, ->{order(created_at: :desc)}
 
 	has_one :product_property
@@ -37,9 +38,9 @@ class Product < ActiveRecord::Base
 
 	def after_initialized
     self.product_property = ProductProperty.new if self.product_property.blank?
-    self.bike_property = BikeProperty.new if self.bike_property.blank?
-    self.car = Car.new if self.car.blank?
-    self.gadget = Gadget.new if self.gadget.blank?
-    self.address = Address.new if self.address.blank?
+    self.bike_property    = BikeProperty.new if self.bike_property.blank?
+    self.car              = Car.new if self.car.blank?
+    self.gadget           = Gadget.new if self.gadget.blank?
+    self.address          = Address.new if self.address.blank?
   end
 end
