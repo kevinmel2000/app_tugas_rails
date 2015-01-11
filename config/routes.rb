@@ -25,6 +25,5 @@ Rails.application.routes.draw do
     resources :addresses
     resources :profiles
     resources :web_settings
-    resources :product_properties
   end
 end
