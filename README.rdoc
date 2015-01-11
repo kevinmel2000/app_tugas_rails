@@ -21,30 +21,31 @@ FATHAN
 
 
 YOGI
-Buat Select helper untuk kebutuhan sistem berikut yang harus dibuat:
-++ untuk product GADGET & ELEKTRONIK
-	- color (ex: black, brown, red, yellow, dll) 
-	- sim (ex: one sim, dual sim, tree simm)
-	- camera (ex: 1..32 Megapixel)
+-Buat Select helper untuk kebutuhan sistem berikut yang harus dibuat:
+- ++ untuk product GADGET & ELEKTRONIK
+- color (ex: black, brown, red, yellow, dll) 
+- sim (ex: one sim, dual sim, tree simm)
+- camera (ex: 1..32 Megapixel)
 ++ untuk product PROPERTY
-	- Kamar Mandi (ex: 1,2,3,4,5,6,7,8,9 ...n)
-	- Kamar Tidur (ex: 1,2,3,4,5,6,7,8,9 ...n)
-	- Sertifikat (ex: SHM(Sertifikat Hak Milik) - HGB(Hak Guna Bangun) - Lainnya(PPJB,Girik,Adat,dll))
+- Kamar Mandi (ex: 1,2,3,4,5,6,7,8,9 ...n)
+- Kamar Tidur (ex: 1,2,3,4,5,6,7,8,9 ...n)
+- Sertifikat (ex: SHM(Sertifikat Hak Milik) - HGB(Hak Guna Bangun) - Lainnya(PPJB,Girik,Adat,dll))
 
 
 ISRAJ
-++ untuk product BIKE
-	- tambahin field-field berikut ini supaya bisa jadi crud di product bike terus terap-terapin select helpernya samain kaya yang di car.
-		- transmission
-		- kilometer
-		- production_year
-		- number_plate
-		- full_tank
-++ untuk product CAR
- - Transimission (Manual, Semi Auto, Automatis)
- - Seat (ex: 1,2,3,4,5...n)
- - door (ex: 1,2,3,4,5...n)
- - year (ex: 1945 ... 2015 {Looping data})
- - engine (ex: 4 slinder, 8 slinder)
+- ++ untuk product BIKE
+- tambahin field berikut supaya bisa jadi crud di bike terus terapin select helpernya samain kaya yang di car.
+- (transmission)
+- (kilometer)
+- (production_year)
+- (number_plate)
+- (full_tank)
+
+- ++ untuk product CAR
+- Transimission (Manual, Semi Auto, Automatis)
+- Seat (ex: 1,2,3,4,5...n)
+- door (ex: 1,2,3,4,5...n)
+- year (ex: 1945 ... 2015 {Looping data})
+- engine (ex: 4 slinder, 8 slinder)
 
  <%= ----------------------- GOOD LUCK GAN -------------------- %>
