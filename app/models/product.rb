@@ -12,6 +12,8 @@ class Product < ActiveRecord::Base
 
 	belongs_to :category, foreign_key: 'category_id'
 
+	
+
 	def verified
 		if self.status == true
 			"<div class='label label-success'>ACTIVE</div>".html_safe
