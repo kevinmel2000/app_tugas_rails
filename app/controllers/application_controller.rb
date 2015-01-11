@@ -24,6 +24,6 @@ class ApplicationController < ActionController::Base
   protected
     def meta_content
       @meta   = WebSetting.first
-      @slider = WebSetting.all
+      @slider = WebSetting.first
     end
 end

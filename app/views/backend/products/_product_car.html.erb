@@ -2,7 +2,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="example-chosen">Transmission</label>
                 <div class="col-md-6">
-                        <%#= product_car.select :transmission, option_for_select(@transmission), {include_blank: 'Choose one'}, class: 'form-control' %>
+                        <%= product_car.select :transmission, options_for_select(transmission, nil), {include_blank: 'Choose one'}, class: 'form-control' %>
                 </div>
             </div>
 
