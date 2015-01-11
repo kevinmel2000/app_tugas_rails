@@ -50,6 +50,18 @@ class Backend::ProductsController < Backend::ApplicationBackendController
 																					:product_id,
 																					:_destroy
 																	      ],
+																	      car_attributes: [
+																	      	:id,
+																	      	:transmission,
+																	      	:kilometer,
+																	      	:seat,
+																	      	:door,
+																	      	:production_year,
+																	      	:number_plate,
+																	      	:engine,
+																	      	:fuel,
+																	      	:product_id
+																	      ],
 																				galleries_attributes: [
 																	        :id,
 																	        :title,
