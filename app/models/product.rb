@@ -1,4 +1,7 @@
 class Product < ActiveRecord::Base
+	extend Friendlyid
+	friendly_id :title, use: [:slugged, :finders]
+
 	scope :latest, ->{order(created_at: :desc)}
 
 	has_one :product_property

@@ -29,7 +29,6 @@ ActiveRecord::Schema.define(version: 20150111050149) do
     t.string   "addressable_type"
   end
 
-<<<<<<< HEAD
   create_table "bike_properties", force: true do |t|
     t.string   "brand"
     t.string   "color"
@@ -39,7 +38,8 @@ ActiveRecord::Schema.define(version: 20150111050149) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "product_id"
-=======
+  end
+
   create_table "cars", force: true do |t|
     t.string   "transmission"
     t.string   "kilometer"
@@ -53,7 +53,6 @@ ActiveRecord::Schema.define(version: 20150111050149) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "product_id"
->>>>>>> 54656678bc864ddc3a4762e94d563afc381ea3cc
   end
 
   create_table "categories", force: true do |t|
