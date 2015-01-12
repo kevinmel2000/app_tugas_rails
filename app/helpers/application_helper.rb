@@ -13,8 +13,8 @@ module ApplicationHelper
 
       Array(message).each do |msg|
         text = content_tag(:div,
-                           content_tag(:a, raw("&times;"), class: "close", "data-dismiss" => "alert") +
-                           msg, class: "alert alert-#{type}")
+         content_tag(:a, raw("&times;"), class: "close", "data-dismiss" => "alert") +
+         msg, class: "alert alert-#{type}")
         flash_messages << text if message
       end
     end
@@ -28,7 +28,7 @@ module ApplicationHelper
       :div,
       content_tag(:a, raw("&times;"), class: "close", "data-dismiss" => "alert") +
       messages.join('<br />').html_safe, class: "alert alert-danger"
-    ) unless messages.blank?
+      ) unless messages.blank?
   end
 
   def error_on(record, field)
@@ -41,7 +41,22 @@ module ApplicationHelper
   end
 
   def transmission
-    @transmission = ['auto','semi','semi auto']
+    @transmission = ['manual','automatic']
   end
+  def seat
+    @seat = ['2','4','6']
+  end
+  def door
+    @door = ['2','4','5']
+  end
+  def fuel
+    @fuel = ['premium','pertamax','pertamax plus']
+  end
+  def engine
+    @engine = ['intake stroke','compression stroke','combustion stroke','exhaust stroke']
+  end
+  # def year
+  #   @year = [Date.current.year,:end_year => 1920]
+  # end
 
 end
