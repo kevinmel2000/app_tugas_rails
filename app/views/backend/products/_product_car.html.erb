@@ -15,20 +15,19 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="example-chosen">Seat</label>
                 <div class="col-md-6">
-                    <%= product_car.select :seat, options_for_select(seat, nil), {include_blank: 'Choose Seat'}, class: 'form-control' %>                
+                    <%= product_car.select :seat, options_for_select(seat, nil), {include_blank: 'Choose Seat'}, class: 'select-chosen', id: 'example-chosen'  %>              
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-md-4 control-label" for="example-chosen">Door</label>
                 <div class="col-md-6">
-                    <%= product_car.select :door, options_for_select(door, nil), {include_blank: 'Choose Door'}, class: 'form-control' %>
+                    <%= product_car.select :door, options_for_select(door, nil), {include_blank: 'Choose Door'}, class: 'select-chosen', id: 'example-chosen'  %>
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-md-4 control-label" for="example-chosen">Production Year</label>
                 <div class="col-md-6">
-                <%#= product_car.select :production_year, options_for_select(year, nil), {include_blank: 'Choose one'}, class: 'form-control' %>
-                <%= product_car.select :production_year, (2000..Time.now.year).to_a, {include_blank: 'Choose Year'}, class: 'form-control' %>
+                <%= product_car.select :production_year, (1945..Time.now.year).to_a, {include_blank: 'Choose Year'}, class: 'select-chosen', id: 'example-chosen'  %>
              </div>
          </div>
          <div class="form-group">
@@ -40,13 +39,13 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="example-chosen">Engine</label>
             <div class="col-md-6">
-                <%= product_car.select :engine, options_for_select(engine, nil), {include_blank: 'Choose Engine'}, class: 'form-control' %>
+                <%= product_car.select :engine, options_for_select(engine, nil), {include_blank: 'Choose Engine'}, class: 'select-chosen', id: 'example-chosen'  %>
             </div>
         </div>
         <div class="form-group">
             <label class="col-md-4 control-label" for="example-chosen">Fuel</label>
             <div class="col-md-6">
-                <%= product_car.select :fuel, options_for_select(fuel, nil), {include_blank: 'Choose Fuel'}, class: 'form-control' %>
+                <%= product_car.select :fuel, options_for_select(fuel, nil), {include_blank: 'Choose Fuel'}, class: 'select-chosen', id: 'example-chosen'  %>
             </div>
         </div>
     </fieldset>
