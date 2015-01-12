@@ -29,4 +29,3 @@ gem 'inherited_resources'
 gem 'byebug'
 gem 'friendly_id'
 gem 'breadcrumbs_on_rails'
->>>>>>> a28afe84e59feaa23b2e149af75f05a7c2362c63
