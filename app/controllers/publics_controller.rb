@@ -3,6 +3,8 @@ class PublicsController < ApplicationController
 	end
 
 	def catalog
+		@product = Product.all.page(params[:page]).per(2)
+		render layout: 'application_catalog'
 	end
 
 	def single_post	

@@ -1,15 +1,13 @@
-<!-- sub top header -->
 <section class="sub-top-header padding-top50">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12"> 
-				<h3>Katalog Apartemen dan Perumahan</h3>
+				<h3>Katalog</h3>
 			</div>
 		</div>
 	</div>
 </section>
 
-<!-- filter catalog top -->
 <section class="filter-catalog-top">
 	<div class="container">
 		<div class="row">
@@ -172,12 +170,11 @@
 	</div>
 </section>
 
-<!-- content catalog -->
 <section class="content-catalog">
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
-			<h2><span>Catalog Iklan</span> Property Perumahan</h2>
+			<h2><span>Catalog Iklan</span></h2>
 			<div class="br30"></div>
 			<div role="tabpanel">
 				<ul class="nav nav-tabs" role="tablist">
@@ -194,7 +191,7 @@
 
 				<div class="tab-content">
 					<div role="tabpanel1" class="tab-pane active" id="all">
-						<% (1..10).each do %>
+						<% @product.each do |f| %>
 							<a href="#">
 								<div class="box-catalog-ads border-shadow-right">
 									<div class="col-sm-2">
@@ -202,17 +199,17 @@
 											<span class="fa fa-clock-o"></span>
 											<div class="br10"></div>
 										</div>
-										<span>1 Menit yang lalu</span>
+										<span><%= f.created_at.strftime('%d %b %Y - at %I:%M%p') %></span>
 									</div>
 									<div class="col-md-3">
-										<%= image_tag 'noimage.jpg', alt: 'Gambar', class: 'img-thumbnail' %>
+										<%#= image_tag "#{f.file}", class: "img-thumbnail" %>
 									</div>
 									<div class="col-md-4">
 										<div class="description-catalog-center"> 
-											<h4>Perumahan taman anggrek EXPERT</h4>
+											<h4><%= f.title %></h4>
 											<div class="br30"></div>
 											<div class="col-sm-6 col-xs-6 padding-left0">
-												<span class="fa fa-map-marker"></span> Kota Sukabumi
+												<span class="fa fa-map-marker"></span> <%#= f.city %>
 											</div>
 											<div class="col-sm-6 col-xs-6">
 												<span class="fa fa-user"></span> Perumahan
@@ -220,11 +217,12 @@
 										</div>
 									</div>
 									<div class="col-md-3">
-										<span class="catalog-price-right"><span class="fa fa-tags"></span>  Rp. 1.000.000.000,-</span>
+										<span class="catalog-price-right"><span class="fa fa-tags"></span>  <%= f.price %></span>
 									</div>
 								</div>
 							</a>
 						<% end %>
+						<%= paginate @product %>
 					</div>
 					<div role="tabpanel1" class="tab-pane" id="new">
 						<% (1..10).each do %>
