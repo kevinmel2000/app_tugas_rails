@@ -41,7 +41,7 @@ module ApplicationHelper
   end
 
   def transmission
-    @transmission = ['manual','automatic']
+    @transmission = ['manual','automatic','semi-auto']
   end
   def seat
     @seat = ['1','2','3','4','5','6','7','8','9','10','11','12']
@@ -55,6 +55,10 @@ module ApplicationHelper
   def engine
     @engine = ['intake stroke','compression stroke','combustion stroke','exhaust stroke']
   end
+  def fulltank
+    @fulltank = ['5 Liter','4 Liter','15 Liter']
+  end
+
   # def year
   #   @year = [Date.current.year,:end_year => 1920]
   # end
