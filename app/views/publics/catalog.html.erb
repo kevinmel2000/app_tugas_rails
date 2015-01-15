@@ -202,7 +202,7 @@
 										<span><%= f.created_at.strftime('%d %b %Y - at %I:%M%p') %></span>
 									</div>
 									<div class="col-md-3">
-										<%#= image_tag "#{f.file}", class: "img-thumbnail" %>
+										<%#= image_tag f.file.first.url(:large) if f.file.present? %>
 									</div>
 									<div class="col-md-4">
 										<div class="description-catalog-center"> 
@@ -217,7 +217,10 @@
 										</div>
 									</div>
 									<div class="col-md-3">
-										<span class="catalog-price-right"><span class="fa fa-tags"></span>  <%= f.price %></span>
+										<span class="catalog-price-right">
+											<span class="fa fa-tags"></span>  
+											<%= f.price.present? ? number_to_currency(f.price, unit: 'Rp.') : 'Call Us' %>
+											</span>
 									</div>
 								</div>
 							</a>
