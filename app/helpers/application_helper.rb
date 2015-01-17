@@ -67,13 +67,13 @@ module ApplicationHelper
     @sim = ['One Sim','Dual Sim','Tree Sim']
   end
   def camera
-    @camera = ['1','2','3','4','5','6','7','8','9','10','11','12']
+    @camera = (1..32)
   end
    def bathroom
-    @bathroom = ['1','2','3','4','5','6','7','8','9','10','11','12']
+    @bathroom = (1..12)
   end
    def bedroom
-    @bedroom = ['1','2','3','4','5','6','7','8','9','10','11','12']
+    @bedroom = (1..12)
   end
   def certificate
     @certificate = ['SSHM(Sertifikat Hak Milik)','DHGB(Hak Guna Bangun)','TLainnya(PPJB,Girik,Adat,dll))']
