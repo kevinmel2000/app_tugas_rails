@@ -25,7 +25,7 @@
 <div class="form-group">
 	<label class="col-md-4 control-label" for="example-chosen">color</label>
 	<div class="col-md-6">
-		<%= bike_property.select :color, options_for_select(color, nil), {include_blank: 'Color'}, class: 'select-chosen', id: 'example-chosen'  %>              
+		<%= bike_property.select :color, options_for_select(color, bike_property.object.color), {include_blank: 'Color'}, class: 'select-chosen', id: 'example-chosen'  %>              
 	</div>
 </div>
 <div class="form-group">
@@ -37,13 +37,13 @@
 <div class="form-group">
 <label class="col-md-4 control-label" for="example-chosen">Transmission</label>
 	<div class="col-md-6">
-		<%= bike_property.select :transmission, options_for_select(transmission,nil), {include_blank: 'transmission'}, class: 'select-chosen', id: 'example-chosen'  %>              
+		<%= bike_property.select :transmission, options_for_select(transmission, bike_property.object.transmission), {include_blank: 'transmission'}, class: 'select-chosen', id: 'example-chosen'  %>              
 	</div>
 </div>
 <div class="form-group">
 <label class="col-md-4 control-label" for="example-chosen">Full Tank</label>
 	<div class="col-md-6">
-		<%= bike_property.select :full_tank, options_for_select(fulltank,nil), {include_blank: 'full tank'}, class: 'select-chosen', id: 'example-chosen'  %>              
+		<%= bike_property.select :full_tank, options_for_select(fulltank, bike_property.object.full_tank), {include_blank: 'full tank'}, class: 'select-chosen', id: 'example-chosen'  %>              
 	</div>
 </div>
 <div class="form-group">

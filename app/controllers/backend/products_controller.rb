@@ -100,6 +100,11 @@ class Backend::ProductsController < Backend::ApplicationBackendController
 																	        :color,
 																	        :condition,
 																	        :product_id,
+																	        :production_year,
+																	        :transmission,
+																	        :full_tank,
+																	        :kilometer,
+																	        :number_plate,
 																	        :_destroy
 																	      ],
 																	      address_attributes: [
