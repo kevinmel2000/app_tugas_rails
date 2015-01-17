@@ -32,11 +32,11 @@
 									<h3>CARI BARANG DISINI!</h3>
 								</div>
 								<div class="br10"></div>
-								<form action="" method="POST">
+								<%= form_for :search, method: 'get', url: catalog_path do |f| %>
 									<div class="search-input-top-index1">
 										<div class="col-md-12">
 											<label class="label-search-carousel">Lokasi</label>
-											<input type="text" class="form-control" name="" placeholder="Masukan Lokasi Pencarian">
+											<%= text_field_tag :title, nil, class: "form-control", placeholder: "Masukan Lokasi Pencarian" %>
 										</div>
 									</div>
 									<div class="br20"></div>
@@ -101,7 +101,7 @@
 										<button id="js-trigger-overlay" class="btn btn-info btn-green-effect no-border btn-block">Cari Property</button>
 									</div>
 									<div class="br15"></div>
-								</form>
+								<% end %>
 							</div>
 						</div>
 					</div>

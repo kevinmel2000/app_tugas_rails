@@ -4,7 +4,7 @@ class PublicsController < ApplicationController
 	end
 
 	def catalog
-		@product = Product.all.page(params[:page]).per(2)
+		@product = Product.latest.filter_search(params).page(params[:page]).per(10)
 		render layout: 'application_catalog'
 	end
 

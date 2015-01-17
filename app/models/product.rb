@@ -4,6 +4,9 @@ class Product < ActiveRecord::Base
 
 	friendly_id :title, use: [:slugged, :finders]
 
+	include ProductSearching
+	
+	scope :verfied, ->{where(status: 1)}
 	scope :latest, ->{order(created_at: :desc)}
 	scope :oldest, ->{order(created_at: :asc)}
 	scope :updated, ->{order(updated: :desc)}
