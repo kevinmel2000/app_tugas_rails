@@ -64,6 +64,7 @@ class Backend::ProductsController < Backend::ApplicationBackendController
 																	      	:number_plate,
 																	      	:engine,
 																	      	:fuel,
+																	      	:color,
 																	      	:product_id
 																	      ],
 																	      gadget_attributes: [

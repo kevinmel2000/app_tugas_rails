@@ -19,7 +19,7 @@
 <div class="form-group">
 	<label class="col-md-4 control-label" for="example-chosen">color</label>
 	<div class="col-md-6">
-		<%= gadget.select :color, options_for_select(color, nil), {include_blank: 'Color'}, class: 'select-chosen', id: 'example-chosen'  %>              
+		<%= gadget.select :color, options_for_select(color, gadget.object.color), {include_blank: 'Color'}, class: 'select-chosen', id: 'example-chosen'  %>              
 	</div>
 </div>
 <div class="form-group">
@@ -37,7 +37,7 @@
 <div class="form-group">
 	<label class="col-md-4 control-label" for="example-chosen">Sim</label>
 	<div class="col-md-6">
-		<%= gadget.select :color, options_for_select(sim, nil), {include_blank: 'sim'}, class: 'select-chosen', id: 'example-chosen'  %>              
+		<%= gadget.select :sim, options_for_select(sim, gadget.object.sim), {include_blank: 'sim'}, class: 'select-chosen', id: 'example-chosen'  %>              
 	</div>
 </div>
 <div class="form-group">
@@ -49,7 +49,7 @@
 <div class="form-group">
 	<label class="col-md-4 control-label" for="example-chosen">Camera</label>
 	<div class="col-md-6">
-		<%= gadget.select :camera, options_for_select(camera, nil), {include_blank: 'Camera'}, class: 'form-control', id: 'example-chosen'  %>              
+		<%= gadget.select :camera, options_for_select(camera, gadget.object.camera), {include_blank: 'Camera'}, class: 'form-control', id: 'example-chosen'  %>              
 	</div>
 </div>
 <div class="form-group">
