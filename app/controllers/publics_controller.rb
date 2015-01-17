@@ -1,10 +1,20 @@
 class PublicsController < ApplicationController
 	def home
-		@products = Product.all
+		root = Product.latest
+
+		@hot_ads = root.verified.limit(16)
+		@latest_ads = root.limit(16)
 	end
 
 	def catalog
-		@product = Product.latest.filter_search(params).page(params[:page]).per(10)
+		@product = Product.latest.page(params[:page]).per(10)
+
+		render layout: 'application_catalog'
+	end
+
+	def results
+		@product = Product.latest.page(params[:page]).per(10).filter_search(params)
+
 		render layout: 'application_catalog'
 	end
 

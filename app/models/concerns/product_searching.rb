@@ -11,9 +11,19 @@ module ProductSearching
       where(query_opts, {key: "%#{title}%"})
     end
 
+    scope :filter_by_catalog_type, ->(catalog_type) do
+    	where(catalog_type: catalog_type)
+    end
+
+    scope :filter_by_bike_production_year, ->(bike_production_year) do 
+    	bonds.where("bike_properties.production_year =?", bike_production_year)
+    end
+
     scope :filter_search, ->(params)  do
       return all if params.blank?
       filter_by_title(params[:title])
+      .filter_by_catalog_type(params[:catalog_type])
+      .filter_by_bike_production_year(params[:bike_production_year])
     end
 
 	end

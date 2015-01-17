@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'publics#home'
   
   get 'catalog',      to: 'publics#catalog',        as: 'catalog'
+  get 'results',      to: 'publics#results',        as: 'results'
   get 'single_post',  to: 'publics#single_post',    as: 'single_post'
   get 'about_us',     to: 'publics#about_us',       as: 'about_us'
   get 'forum_diskusi',to: 'publics#forum_diskusi',  as: 'forum_diskusi'
