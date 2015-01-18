@@ -58,6 +58,9 @@ module ApplicationHelper
   def fulltank
     @fulltank = ['5 Liter','4 Liter','15 Liter']
   end
+  def brand
+    @brand = ['Honda','Yamaha','Suzuki','Bajaj','Kawasaki','Scooter','KTM','Ducati']
+  end
  
 
   def color
