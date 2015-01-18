@@ -5,7 +5,11 @@ class Backend::ProductsController < Backend::ApplicationBackendController
 	helper_method :products_category_options 
 
 	def index
-		@products = Product.latest
+		if params[:catalog_type]
+			@products = Product.latest.send(params[:catalog_type])
+		else
+			@products = Product.latest
+		end
 	end
 
 	def new

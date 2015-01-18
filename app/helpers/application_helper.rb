@@ -85,7 +85,12 @@ module ApplicationHelper
     @condition = ['Baru','Bekas']
   end
   def catalog_type
-    @catalog_type = ['Property','Gadget','Mobil','Motor']
+    @catalog_type = [
+                      ['Rumah dan Properti','Property'],
+                      ['Gadget and Elektronik','Gadget'],
+                      ['Motor','Motor'],
+                      ['Mobil', 'Mobil']
+                    ]
   end
 
  
