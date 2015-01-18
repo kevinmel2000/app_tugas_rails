@@ -7,7 +7,7 @@
 				List Users
 				<% end %>
 			</div>
-			<h2><strong>Product</strong> New</h2>
+			<h2><strong>User</strong> New</h2>
 		</div>
 		<%= form_for [:backend, @user], url: backend_users_path, :html => {:class => "form-horizontal form-bordered"} do |f| %>
 			<%= render partial: 'form', locals: {f: f} %>
