@@ -81,6 +81,12 @@ module ApplicationHelper
   def certificate
     @certificate = ['SSHM(Sertifikat Hak Milik)','DHGB(Hak Guna Bangun)','TLainnya(PPJB,Girik,Adat,dll))']
   end
+  def condition
+    @condition = ['Sangat Baik','Baik','Cukup','Jelek']
+  end
+  def catalog_type
+    @catalog_type = ['Rumah','Kontrakan','tanah','Apartemen']
+  end
 
  
 

@@ -52,6 +52,8 @@ class Backend::ProductsController < Backend::ApplicationBackendController
 																					:electrical_power,
 																					:birth_year,
 																					:product_id,
+																					:condition,
+																					:catalog_type,
 																					:_destroy
 																	      ],
 																	      car_attributes: [

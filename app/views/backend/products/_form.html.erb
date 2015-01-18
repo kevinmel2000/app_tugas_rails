@@ -21,6 +21,18 @@
 								<%= f.check_box :status, class: 'form-control' %>
 							</div>
 						</div>
+						<div class="form-group">
+						<label class="col-md-4 control-label" for="example-chosen">Condition</label>
+							<div class="col-md-6">
+								<%= f.select :condition, options_for_select(condition, f.object.condition), {include_blank: 'condition'}, class: 'select-chosen', id: 'example-chosen'  %>              
+							</div>
+						</div>
+						<div class="form-group">
+						<label class="col-md-4 control-label" for="example-chosen">Catalog Type</label>
+							<div class="col-md-6">
+								<%= f.select :catalog_type, options_for_select(catalog_type, f.object.catalog_type), {include_blank: 'catalog_type'}, class: 'select-chosen', id: 'example-chosen'  %>            
+							</div>
+						</div>
 						<!-- <div class="form-group">
 							<label class="col-md-4 control-label" for="example-chosen">Category</label>
 							<div class="col-md-6">
