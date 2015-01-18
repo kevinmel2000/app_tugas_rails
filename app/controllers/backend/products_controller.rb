@@ -40,7 +40,7 @@ class Backend::ProductsController < Backend::ApplicationBackendController
 	private
     
 		def product_params
-			params.require(:product).permit(:id, :title, :description, :price, :category_id, :status, :user_id, :parent_id, 
+			params.require(:product).permit(:id, :condition, :catalog_type, :title, :description, :price, :category_id, :status, :user_id, :parent_id, 
 																				product_property_attributes: [
 																	      	:id,
 																	      	:building_area,
@@ -52,8 +52,6 @@ class Backend::ProductsController < Backend::ApplicationBackendController
 																					:electrical_power,
 																					:birth_year,
 																					:product_id,
-																					:condition,
-																					:catalog_type,
 																					:_destroy
 																	      ],
 																	      car_attributes: [
