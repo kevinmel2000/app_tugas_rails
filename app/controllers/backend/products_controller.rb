@@ -1,6 +1,6 @@
 class Backend::ProductsController < Backend::ApplicationBackendController
 	add_breadcrumb "Home", :backend_path
-  add_breadcrumb "Products", :backend_products_path
+	add_breadcrumb "Products", :backend_products_path
 
 	helper_method :products_category_options 
 
@@ -42,6 +42,7 @@ class Backend::ProductsController < Backend::ApplicationBackendController
 	end
 
 	private
+
     
 		def product_params
 			params.require(:product).permit(:id, :condition, :catalog_type, :title, :description, :price, :category_id, :status, :user_id, :parent_id, 
@@ -123,7 +124,8 @@ class Backend::ProductsController < Backend::ApplicationBackendController
 																	      ])
 		end
 
-	  def products_category_options
-	    @products_category_options ||= Category.all.map{|category| [category.name, category.id] }
-	  end
+
+def products_category_options
+	@products_category_options ||= Category.all.map{|category| [category.name, category.id] }
+end
 end

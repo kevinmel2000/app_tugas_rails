@@ -26,5 +26,6 @@ Rails.application.routes.draw do
     resources :profiles
     resources :web_settings
     resources :cars
+    resources :sponsors
   end
 end
