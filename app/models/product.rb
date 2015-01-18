@@ -5,6 +5,9 @@ class Product < ActiveRecord::Base
 	friendly_id :title, use: [:slugged, :finders]
 
 	scope :latest, ->{order(created_at: :desc)}
+	scope :oldest, ->{order(created_at: :asc)}
+	scope :updated, ->{order(updated: :desc)}
+
 
 	has_one :product_property
 	accepts_nested_attributes_for :product_property

@@ -1,5 +1,6 @@
 class PublicsController < ApplicationController
 	def home
+		@products = Product.latest.page(params[:page]).per(4)
 	end
 
 	def catalog
