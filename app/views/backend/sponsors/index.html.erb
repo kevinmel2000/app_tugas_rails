@@ -1,0 +1,43 @@
+<div id="page-content">
+	<div class="block full">
+		<div class="block-title">
+			<div class="block-options pull-right">
+				<%= link_to new_backend_sponsor_path do %>
+				<div class="btn btn-success">
+					New Data
+				</div>
+				<% end %>
+			</div>
+			<h2><strong>Sponsor</strong> lists</h2>
+		</div>
+		<div class="table-responsive">
+			<table id="example-datatable" class="table table-vcenter table-condensed table-bordered">
+				<thead>
+					<tr>
+						<th class="text-center">No</th>
+						<th>Title</th>
+						<th>Image</th>
+						<th class="text-center">Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @sponsors.each_with_index do |sponsor,index| %>
+					<tr>
+						<td class="text-center"><%= index + 1 %></td>						
+						<td><%= link_to sponsor.link_url do %>
+						<%= sponsor.title %></td>
+						<% end -%>
+						<td><%= image_tag sponsor.image.url(:medium) if sponsor.image.present? %></td>
+						<td class="text-center">
+							<div class="btn-group">
+								<%= link_to 'Edit', edit_backend_sponsor_path(sponsor), class: 'btn btn-default btn-sm' %> 
+								<%= link_to 'Delete', backend_sponsor_path(sponsor), method: 'delete', class: 'btn btn-danger btn-sm' %> 
+							</div>
+						</td>
+					</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
