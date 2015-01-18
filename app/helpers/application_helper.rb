@@ -58,6 +58,29 @@ module ApplicationHelper
   def fulltank
     @fulltank = ['5 Liter','4 Liter','15 Liter']
   end
+ 
+
+  def color
+    @color = ['Black','Brown','red','Yellow','Blue']
+  end
+  def sim
+    @sim = ['One Sim','Dual Sim','Tree Sim']
+  end
+  def camera
+    @camera = (1..32)
+  end
+   def bathroom
+    @bathroom = (1..12)
+  end
+   def bedroom
+    @bedroom = (1..12)
+  end
+  def certificate
+    @certificate = ['SSHM(Sertifikat Hak Milik)','DHGB(Hak Guna Bangun)','TLainnya(PPJB,Girik,Adat,dll))']
+  end
+
+ 
+
 
   # def year
   #   @year = [Date.current.year,:end_year => 1920]
