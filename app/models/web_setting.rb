@@ -10,7 +10,7 @@ class WebSetting < ActiveRecord::Base
       :medium => "100x100#",
       :large  => "300x300#"
     },
-    :default_url => "/assets/no-image.jpg"
+    :default_url => "../assets/noimage.jpg"
 
   has_attached_file :logo,
     :styles => {
@@ -18,7 +18,7 @@ class WebSetting < ActiveRecord::Base
       :medium => "100x100#",
       :large  => "300x300#"
     },
-    :default_url => "/assets/no-image.jpg"
+    :default_url => "../assets/noimage.jpg"
   
   validates_attachment :favicon, content_type:{ content_type: ["image/jpeg", "image/jpg", "image/png"] }
   validates_attachment :logo, content_type:{ content_type: ["image/jpeg", "image/jpg", "image/png"] }

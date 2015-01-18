@@ -4,7 +4,7 @@
 	<div class="form-group">
 		<label class="col-md-4 control-label" for="example-chosen">Image</label>
 		<div class="col-md-6">
-			<%= image_tag f.object.file.url(:large) if f.object.file.present? %>
+			<%= image_tag f.object.file.url(:large) %>
 			<%= f.file_field :file, class: 'form-control' %>
 		</div>
 	</div>

@@ -1,59 +1,53 @@
-<!-- ads top  -->
-<section class="ads-top">
+<section class="ads-hot">
 	<div class="container">
 		<div class="br25"></div>
 		<div class="row">
 			<div class="row">
 				<div class="col-md-9">
-					<h3>IKLAN TERBARU</h3>
+					<h3>HOT IKLAN</h3>
 				</div>
 				<div class="col-md-3">
 					<div class="controls pull-right hidden-xs">
-						<a class="left fa fa-caret-square-o-left btn btn-default btn-xs" href="#carousel2" data-slide="prev"></a>
-						<a class="left fa fa-caret-square-o-right btn btn-default btn-xs" href="#carousel2" data-slide="next"></a>
+						<a class="left fa fa-caret-square-o-left btn btn-primary btn-xs" href="#carousel1" data-slide="prev"></a>
+						<a class="left fa fa-caret-square-o-right btn btn-primary btn-xs" href="#carousel1" data-slide="next"></a>
 					</div>
 				</div>
 			</div>
-			<div id="carousel2" class="carousel slide hidden-xs" data-ride="carousel">
+			<div id="carousel1" class="carousel carousel_catalog slide hidden-xs" data-ride="carousel">
 				<div class="carousel-inner">
-					<div class="item active">
-						<div class="row">
-							<% @products.each do |p|  %>
-								<div class="col-sm-3">
-									<div class="col-item">
-										<div class="photo">
-											<%= image_tag "#{p.galleries.first.file.url(:large)}", alt: 'Gambar', class: 'img-responsive' %>
+					<% @products.each do |p|  %>
+						<div class="cata-item col-sm-3">
+							<div class="col-item">
+								<div class="photo">
+									<%= image_tag "#{p.galleries.first.file.url(:large)}", alt: 'Gambar', class: 'img-responsive' %>
+								</div>
+								<div class="info">
+									<div class="row">
+										<div class="price col-md-6">
+											<h5><%= p.title %></h5>
+											<h5 class="price-text-color">Rp. <%= p.price %></h5>
 										</div>
-										<div class="info">
-											<div class="row">
-												<div class="price col-md-6">
-													<h5><% p.title %></h5>
-													<h5 class="price-text-color"><% p.price %></h5>
-												</div>
-												<div class="rating hidden-sm col-md-6">
-													<i class="price-text-color fa fa-star"></i>
-													<i class="price-text-color fa fa-star"></i>
-													<i class="price-text-color fa fa-star"></i>
-													<i class="price-text-color fa fa-star"></i>
-
-												</div>
-											</div>
-											<div class="separator clear-left">
-												<p class="btn-add">
-													<a href="#" class="hidden-sm"><%= image_tag 'fair_deal.png', alt: 'Fair Deal Property' %></a>
-												</p>
-												<p class="btn-details">
-													<i class="fa fa-list"></i><a href="#" class="hidden-sm">Details</a>
-												</p>
-											</div>
-											<div class="clearfix">
-											</div>
+										<div class="rating hidden-sm col-md-6">
+											<i class="price-text-color fa fa-star"></i>
+											<i class="price-text-color fa fa-star"></i>
+											<i class="price-text-color fa fa-star"></i>
+											<i class="price-text-color fa fa-star"></i>
 										</div>
 									</div>
+									<div class="separator clear-left">
+										<p class="btn-add">
+											<a href="#" class="hidden-sm"><%= image_tag 'fair_deal.png', alt: 'Fair Deal Property' %></a>
+										</p>
+										<p class="btn-details">
+											<i class="fa fa-list"></i><a href="#" class="hidden-sm">Details</a>
+										</p>
+									</div>
+									<div class="clearfix">
+									</div>
 								</div>
-							<% end %>
+							</div>
 						</div>
-					</div>
+					<% end %>
 				</div>
 			</div>
 		</div>
