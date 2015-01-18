@@ -13,19 +13,19 @@
 <div class="form-group">
 	<label class="col-md-4 control-label" for="example-chosen">kamar mandi</label>
 	<div class="col-md-6">
-		<%= product_property.select :bathroom, options_for_select(bathroom, nil), {include_blank: 'Kamar Mandi'}, class: 'select-chosen', id: 'example-chosen'  %>              
+		<%= product_property.select :bathroom, options_for_select(bathroom, product_property.object.bathroom), {include_blank: 'Kamar Mandi'}, class: 'select-chosen', id: 'example-chosen'  %>              
 	</div>
 </div>
 <div class="form-group">
 	<label class="col-md-4 control-label" for="example-chosen">Kamar tidur</label>
 	<div class="col-md-6">
-		<%= product_property.select :bedroom, options_for_select(bedroom, nil), {include_blank: 'Kamar Tidur'}, class: 'select-chosen', id: 'example-chosen'  %>              
+		<%= product_property.select :bedroom, options_for_select(bedroom, product_property.object.bedroom), {include_blank: 'Kamar Tidur'}, class: 'select-chosen', id: 'example-chosen'  %>              
 	</div>
 </div>
 <div class="form-group">
 	<label class="col-md-4 control-label" for="example-chosen">Sertifikat bangunan</label>
 	<div class="col-md-6">
-		<%= product_property.select :certificate, options_for_select(certificate, nil), {include_blank: 'Sertivicate Bangunan'}, class: 'select-chosen', id: 'example-chosen'  %>              
+		<%= product_property.select :certificate, options_for_select(certificate, product_property.object.certificate), {include_blank: 'Sertivicate Bangunan'}, class: 'select-chosen', id: 'example-chosen'  %>              
 	</div>
 </div>
 <div class="form-group">
