@@ -151,6 +151,8 @@ ActiveRecord::Schema.define(version: 20150118040858) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slug"
+    t.string   "condition"
+    t.string   "catalog_type"
   end
 
   create_table "profiles", force: true do |t|

@@ -8,6 +8,7 @@ class Product < ActiveRecord::Base
 	scope :oldest, ->{order(created_at: :asc)}
 	scope :updated, ->{order(updated: :desc)}
 
+	after_initialize :populate_galleries
 
 	has_one :product_property
 	accepts_nested_attributes_for :product_property
@@ -46,4 +47,11 @@ class Product < ActiveRecord::Base
     self.gadget           = Gadget.new if self.gadget.blank?
     self.address          = Address.new if self.address.blank?
   end
+
+  private
+  	def populate_galleries
+  		(1..2).each do |index|
+  			new_cover = self.galleries.new
+  		end if self.galleries.blank?
+  	end
 end

@@ -9,7 +9,7 @@ class Gallery < ActiveRecord::Base
       :medium => "100x100#",
       :large  => "300x300#"
     },
-    :default_url => "/assets/no-image.jpg"
+    :default_url => "noimage.jpg"
   
   validates_attachment :file, content_type:{ content_type: ["image/jpeg", "image/jpg", "image/png"] }
 end
