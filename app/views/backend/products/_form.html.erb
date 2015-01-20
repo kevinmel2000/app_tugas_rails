@@ -3,7 +3,7 @@
 	<div class="block">
 		<div class="block-title">
 			<div class="block-options pull-right">
-				<%= link_to backend_products_path, class: "btn btn-alt btn-sm btn-default toggle-bordered" do %>
+				<%= link_to backend_products_path(catalog_type: params[:catalog_type]), class: "btn btn-alt btn-sm btn-default toggle-bordered" do %>
 					List Products
 				<% end %>
 			</div>
