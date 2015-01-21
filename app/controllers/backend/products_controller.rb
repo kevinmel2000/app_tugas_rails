@@ -14,7 +14,6 @@ class Backend::ProductsController < Backend::ApplicationBackendController
 
 	def new
 		add_breadcrumb "New", :new_backend_product_path
-
 		@product = Product.new
 	end
 
@@ -124,8 +123,7 @@ class Backend::ProductsController < Backend::ApplicationBackendController
 																	      ])
 		end
 
-
-def products_category_options
-	@products_category_options ||= Category.all.map{|category| [category.name, category.id] }
-end
+	def products_category_options
+		@products_category_options ||= Category.all.map{|category| [category.name, category.id] }
+	end
 end

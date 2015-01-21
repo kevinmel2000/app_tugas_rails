@@ -4,7 +4,7 @@
 		<div class="block-title">
 			<div class="block-options pull-right">
 				<%= link_to backend_products_path, class: "btn btn-alt btn-sm btn-default toggle-bordered" do %>
-					List Products
+				List Products
 				<% end %>
 			</div>
 			<h2><strong>Product</strong> New</h2>
@@ -22,13 +22,13 @@
 							</div>
 						</div>
 						<div class="form-group">
-						<label class="col-md-4 control-label" for="example-chosen">Condition</label>
+							<label class="col-md-4 control-label" for="example-chosen">Condition</label>
 							<div class="col-md-6">
 								<%= f.select :condition, options_for_select(condition, f.object.condition), {include_blank: 'condition'}, class: 'select-chosen', id: 'example-chosen'  %>              
 							</div>
 						</div>
 						<div class="form-group">
-						<label class="col-md-4 control-label" for="example-chosen">Catalog Type</label>
+							<label class="col-md-4 control-label" for="example-chosen">Catalog Type</label>
 							<div class="col-md-6">
 								<%= f.select :catalog_type, options_for_select(catalog_type, f.object.catalog_type), {include_blank: 'catalog_type'}, class: 'select-chosen', id: 'example-chosen'  %>            
 							</div>
@@ -66,50 +66,50 @@
 				</div>
 
 				<% if params[:catalog_type] %>
-					<% if params[:catalog_type] == 'property' %>
-						<div class="panel panel-default">
-							<div class="panel-heading">Property Details</div>
-							<div class="panel-body">
-								<%= f.fields_for(:product_property) do |product_property| %>
-									<%= render partial: 'product_property_form', locals: { product_property: product_property } %>
-								<% end %>
-							</div>
-						</div>
-					<% elsif params[:catalog_type] == 'bike' %>
-						<div class="panel panel-default">
-							<div class="panel-heading">Bike Details</div>
-							<div class="panel-body">
-								<%= f.fields_for(:bike_property) do |bike_property| %>
-									<%= render partial: 'product_bike_form', locals: { bike_property: bike_property } %>
-								<% end %>
-							</div>
-						</div>
-					<% elsif params[:catalog_type] == 'car' %>
-						<div class="panel panel-default">
-							<div class="panel-heading">Car Details</div>
-							<div class="panel-body">
-								<%= f.fields_for(:car) do |product_car| %>
-									<%= render partial: 'product_car', locals: { product_car: product_car } %>
-								<% end %>
-							</div>
-						</div>
-					<% elsif params[:catalog_type] == 'gadget' %>
-						<div class="panel panel-default">
-							<div class="panel-heading">Gadget Details</div>
-							<div class="panel-body">
-								<%= f.fields_for(:gadget) do |gadget| %>
-									<%= render partial: 'product_gadget_form', locals: { gadget: gadget } %>
-								<% end %>
-							</div>
-						</div>
-					<% end %>
+				<% if params[:catalog_type] == 'property' %>
+				<div class="panel panel-default">
+					<div class="panel-heading">Property Details</div>
+					<div class="panel-body">
+						<%= f.fields_for(:product_property) do |product_property| %>
+						<%= render partial: 'product_property_form', locals: { product_property: product_property } %>
+						<% end %>
+					</div>
+				</div>
+				<% elsif params[:catalog_type] == 'bike' %>
+				<div class="panel panel-default">
+					<div class="panel-heading">Bike Details</div>
+					<div class="panel-body">
+						<%= f.fields_for(:bike_property) do |bike_property| %>
+						<%= render partial: 'product_bike_form', locals: { bike_property: bike_property } %>
+						<% end %>
+					</div>
+				</div>
+				<% elsif params[:catalog_type] == 'car' %>
+				<div class="panel panel-default">
+					<div class="panel-heading">Car Details</div>
+					<div class="panel-body">
+						<%= f.fields_for(:car) do |product_car| %>
+						<%= render partial: 'product_car', locals: { product_car: product_car } %>
+						<% end %>
+					</div>
+				</div>
+				<% elsif params[:catalog_type] == 'gadget' %>
+				<div class="panel panel-default">
+					<div class="panel-heading">Gadget Details</div>
+					<div class="panel-body">
+						<%= f.fields_for(:gadget) do |gadget| %>
+						<%= render partial: 'product_gadget_form', locals: { gadget: gadget } %>
+						<% end %>
+					</div>
+				</div>
+				<% end %>
 				<% end %>
 
 				<div class="panel panel-default">
 					<div class="panel-heading">Address Details</div>
 					<div class="panel-body">
 						<%= f.fields_for(:address) do |address| %>
-							<%= render partial: 'form_address', locals: {address: address} %>
+						<%= render partial: 'form_address', locals: {address: address} %>
 						<% end %>
 					</div>
 				</div>

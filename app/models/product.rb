@@ -1,7 +1,6 @@
 class Product < ActiveRecord::Base
 
 	extend FriendlyId
-
 	friendly_id :title, use: [:slugged, :finders]
 
 	include ProductSearching
@@ -16,9 +15,9 @@ class Product < ActiveRecord::Base
   end
 
   private
-  	def populate_galleries
-  		(1..2).each do |index|
-  			new_cover = self.galleries.new
-  		end if self.galleries.blank?
-  	end
+  def populate_galleries
+    (1..2).each do |index|
+     new_cover = self.galleries.new
+   end if self.galleries.blank?
+ end
 end

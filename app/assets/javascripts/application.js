@@ -21,13 +21,10 @@
 //= require frontend/chosen.prism
 
 $(window).load(function(){
-
 	$('.cata-item').each(function(i) {
 	  if( i % 4 == 0 ) {
 	    $(this).nextAll().andSelf().slice(0,4).wrapAll('<div class="item"></div>');
 	  }
 	});
-
 	$('.carousel_catalog .item:first-child').addClass('active');
-
 });
