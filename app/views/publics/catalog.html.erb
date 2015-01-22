@@ -199,10 +199,10 @@
 											<span class="fa fa-clock-o"></span>
 											<div class="br10"></div>
 										</div>
-										<span><%= f.created_at.strftime('%d %b %Y - at %I:%M%p') %></span>
+										<span><%= f.created_at.strftime('%d %b %Y') %></span>
 									</div>
 									<div class="col-md-3">
-										<%#= image_tag f.file.first.url(:large) if f.file.present? %>
+										<%= image_tag "#{f.galleries.first.file.url(:large)}", alt: 'Gambar', class: 'img-thumbnail' %>
 									</div>
 									<div class="col-md-4">
 										<div class="description-catalog-center"> 
@@ -212,7 +212,7 @@
 												<span class="fa fa-map-marker"></span> <%#= f.city %>
 											</div>
 											<div class="col-sm-6 col-xs-6">
-												<span class="fa fa-user"></span> Perumahan
+												<span class="fa fa-user"></span> <%= f.catalog_type %>
 											</div>
 										</div>
 									</div>

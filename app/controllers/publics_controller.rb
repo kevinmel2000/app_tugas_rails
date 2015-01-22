@@ -8,7 +8,6 @@ class PublicsController < ApplicationController
 
 	def catalog
 		@product = Product.latest.page(params[:page]).per(10)
-
 		render layout: 'application_catalog'
 	end
 
