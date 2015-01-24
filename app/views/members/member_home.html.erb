@@ -3,54 +3,12 @@
 		<div class="br30"></div>
 		<div class="col-md-12">
 			<div class="col-md-4">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						Account menu
-					</div>
-					<div class="panel-body">
-						<ul class="list-unstyled">
-							<li>
-								<button class="btn btn-default btn-sm"><i class="fa fa-home"></i></button>
-								<%= link_to member_home_path do %>
-									Dashboard
-								<% end %>
-							</li>
-							<br>
-							<li>
-								<button class="btn btn-default btn-sm"><i class="fa fa-car"></i></button>
-								<%= link_to member_home_path do %>
-									My Advertisment
-								<% end %>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						Contact User
-					</div>
-					<div class="panel-body">
-						<ul class="list-unstyled">
-							<li>
-								<button class="btn btn-default btn-sm"><i class="fa fa-map-marker"></i></button>
-							</li>
-							<br>
-							<li>
-								<button class="btn btn-default btn-sm"><i class="fa fa-phone"></i></button>
-							</li>
-							<br>
-							<li>
-								<button class="btn btn-default btn-sm"><i class="fa fa-user"></i></button>
-								<%= @user.email %>
-							</li>
-						</ul>
-					</div>
-				</div>
+				<%= render 'shareds/member/sidebar_left' %>
 			</div>
 			<div class="col-md-8">
 				<div class="alert alert-success">
 					<a class="close" data-dismiss="alert">×</a>
-						Successfully Sign To Space Member Sukabumi Marketplace <strong><%= @user.username %></strong>!
+						Successfully Sign in To Space Member Sukabumi Marketplace <strong><%= @member.username %></strong>!
 				</div>
 			</div>			
 		</div>
