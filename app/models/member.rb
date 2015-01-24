@@ -4,7 +4,7 @@ class Member < User
 	has_one :profile, foreign_key: 'user_id', :dependent => :destroy
   has_one :address, foreign_key: 'user_id'
 
-  validates_uniqueness_of :username
+  #validates_uniqueness_of :username
 
 	default_scope { where(type: 'Member')}
 
