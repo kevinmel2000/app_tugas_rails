@@ -13,10 +13,12 @@ module ProductSearching
       end
 
       scope :filter_by_catalog_type, ->(catalog_type) do
+        return if catalog_type.blank?
         where(catalog_type: catalog_type)
       end
 
       scope :filter_by_bike_production_year, ->(bike_production_year) do 
+        return if bike_production_year.blank?
         bonds.where("bike_properties.production_year =?", bike_production_year)
       end
 
