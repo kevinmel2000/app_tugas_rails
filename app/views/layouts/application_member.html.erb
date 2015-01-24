@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<%= render 'shareds/web_setting' %>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+</head>
+<body class="body-pdtop80">
+	<%= render 'shareds/scroll_to_top' %>
+	<%= render 'shareds/navbar_top' %>
+	<%= yield %>
+	<%= render 'shareds/footer' %>
+</body>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+</html>

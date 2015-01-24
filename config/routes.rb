@@ -15,6 +15,11 @@ Rails.application.routes.draw do
   get 'sign_in',      to: 'publics#sign_in',        as: 'sign_in'
   get 'sign_up',      to: 'publics#sign_up',        as: 'sign_up'
 
+  # user
+  get 'member_home',     to: 'members#member_home',        as: 'member_home'
+  get 'member_profile',  to: 'members#member_profile',     as: 'member_profile'
+  get 'member_update',   to: 'members#member_update',      as: 'member_update'
+
   namespace :backend do
     get '/', to: 'home#index'
       

@@ -1,6 +1,4 @@
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :omniauthable,
          :recoverable, :rememberable, :trackable, :validatable
   
@@ -21,7 +19,6 @@ class User < ActiveRecord::Base
   end
 
   protected 
-
     def after_initialized
       self.profile = Profile.new if self.profile.blank?
       self.address = Address.new if self.address.blank?

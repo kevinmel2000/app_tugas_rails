@@ -5,6 +5,10 @@ body {
 	color: #333;
 }
 
+.body-pdtop80{
+	padding-top: 80px;
+}
+
 .container{
 	width: 1024px;
 	display: table;
@@ -257,7 +261,7 @@ h3{
 }
 
 .navbar-default a{
-	color: #FFF!important;
+	/*color: #FFF!important;*/
 }
 
 
@@ -2058,4 +2062,8 @@ color: #888;
 
 .brd-btm-greey{
 	border-bottom: 1px solid #485156;
+}
+
+.white{
+	color: #FFF!important;
 }
