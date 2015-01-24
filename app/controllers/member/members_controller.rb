@@ -1,5 +1,5 @@
 class Member::MembersController < ApplicationController
-	prepend_before_filter :draw_password, only: :update
+	before_filter :draw_passwords, only: :update
 	before_action :set_object
 	before_filter :sex
 
@@ -27,10 +27,10 @@ class Member::MembersController < ApplicationController
 
 	private
 
-		def draw_password
+		def draw_passwords
       %w(password password_confirmation).each do |attr|
-        params[:user].delete(attr)
-      end if params[:user] && params[:user][:password].blank?
+        params[:member].delete(attr)
+      end if params[:member] && params[:member][:password].blank?
     end
 
 		def set_object

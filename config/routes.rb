@@ -21,6 +21,7 @@ Rails.application.routes.draw do
     get 'profile',  to: 'members#profile',     as: 'profile'
 
     resources :members
+    resources :products
   end
 
   namespace :backend do
