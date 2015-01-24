@@ -11,7 +11,11 @@ module ProductScope
 		scope :property, ->{where(catalog_type: 'Property')}
 
 		scope :bonds, -> {
-	  	eager_load(:bike_property, :car, :gadget, :product_property, :address)
+	  	eager_load(:bike_property, :car, :gadget, :product_property)
+	  }
+
+	  scope :bonds_address, ->{
+	  	eager_load(:address)
 	  }
 
 		after_initialize :populate_galleries

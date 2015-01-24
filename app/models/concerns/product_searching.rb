@@ -19,7 +19,7 @@ module ProductSearching
 
       scope :filter_by_location, ->(location) do
         return if location.blank?
-        bonds.where('LOWER(addresses.city) LIKE LOWER("%#{location}%")')
+        bonds_address.where("LOWER(addresses.city) LIKE LOWER('%#{location}%')")
       end      
 
       scope :filter_by_bike_production_year, ->(bike_production_year) do 
