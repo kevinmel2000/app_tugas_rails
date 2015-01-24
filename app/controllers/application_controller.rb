@@ -12,8 +12,6 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
   	if current_user.admin?
   		return backend_path
-  	elsif current_user.member?
-  		return user_home_path
     else
       root_path
   	end

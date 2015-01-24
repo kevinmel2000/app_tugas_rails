@@ -31,7 +31,7 @@ class Backend::ProductsController < Backend::ApplicationBackendController
 		@product = Product.find(params[:id])
 		@product.update(product_params)
 		@product.save
-		redirect_to backend_products_path
+		redirect_to :back
 	end
 
 	def destroy
