@@ -1,0 +1,57 @@
+        <fieldset>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="example-chosen">Transmission</label>
+                <div class="col-md-6">
+                    <%= product_car.select :transmission, options_for_select(transmission, product_car.object.transmission), {include_blank: 'Choose Transmission'}, class: 'form-control' %>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="example-chosen">Kilometer</label>
+                <div class="col-md-6">
+                    <%= product_car.text_field :kilometer, class: 'form-control', placeholder: 'Kilometer' %>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="example-chosen">Seat</label>
+                <div class="col-md-6">
+                    <%= product_car.select :seat, options_for_select(seat, product_car.object.seat), {include_blank: 'Choose Seat'}, class: 'select-chosen', id: 'example-chosen'  %>              
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="example-chosen">Door</label>
+                <div class="col-md-6">
+                    <%= product_car.select :door, options_for_select(door, product_car.object.door), {include_blank: 'Choose Door'}, class: 'select-chosen', id: 'example-chosen'  %>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="example-chosen">Production Year</label>
+                <div class="col-md-6">
+                <%= product_car.select :production_year, (1945..Time.now.year).to_a, {include_blank: 'Choose Year'}, class: 'select-chosen', id: 'example-chosen'  %>
+             </div>
+         </div>
+         <div class="form-group">
+            <label class="col-md-4 control-label" for="example-chosen">Number Plate</label>
+            <div class="col-md-6">
+                <%= product_car.text_field :number_plate, class: 'form-control', placeholder: 'Number Plate' %>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="example-chosen">Color</label>
+            <div class="col-md-6">
+                <%= product_car.select :color, options_for_select(color, product_car.object.color), {include_blank: 'Color'}, class: 'select-chosen', id: 'example-chosen'  %>              
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="example-chosen">Engine</label>
+            <div class="col-md-6">
+                <%= product_car.select :engine, options_for_select(engine, product_car.object.engine), {include_blank: 'Choose Engine'}, class: 'select-chosen', id: 'example-chosen'  %>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="example-chosen">Fuel</label>
+            <div class="col-md-6">
+                <%= product_car.select :fuel, options_for_select(fuel, product_car.object.fuel), {include_blank: 'Choose Fuel'}, class: 'select-chosen', id: 'example-chosen'  %>
+            </div>
+        </div>
+    </fieldset>

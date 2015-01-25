@@ -13,8 +13,29 @@
 			<br>
 			<li>
 				<button class="btn btn-default btn-sm"><i class="fa fa-car"></i></button>
-				<%= link_to member_home_path do %>
-				My Advertisment
+				<%= link_to member_products_path(catalog_type: 'car') do %>
+					Car
+				<% end %>
+			</li>
+			<br>
+			<li>
+				<button class="btn btn-default btn-sm"><i class="fa fa-car"></i></button>
+				<%= link_to member_products_path(catalog_type: 'bike') do %>
+					Bike
+				<% end %>
+			</li>
+			<br>
+			<li>
+				<button class="btn btn-default btn-sm"><i class="fa fa-car"></i></button>
+				<%= link_to member_products_path(catalog_type: 'property') do %>
+					Property
+				<% end %>
+			</li>
+			<br>
+			<li>
+				<button class="btn btn-default btn-sm"><i class="fa fa-car"></i></button>
+				<%= link_to member_products_path(catalog_type: 'gadget') do %>
+					Gadget
 				<% end %>
 			</li>
 		</ul>
@@ -36,7 +57,7 @@
 			<br>
 			<li>
 				<button class="btn btn-default btn-sm"><i class="fa fa-user"></i></button>
-				<%= @member.email %>
+				<%#= @member.email %>
 			</li>
 		</ul>
 	</div>

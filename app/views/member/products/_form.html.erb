@@ -1,0 +1,136 @@
+<div class="container">
+	<div class="row">
+		<div class="br30"></div>
+		<div class="col-md-12">
+			<div class="col-md-4">
+				<%= render 'shareds/member/sidebar_left' %>
+			</div>
+			<div class="col-md-8">
+				<div class="pull-right">
+					<%= link_to backend_products_path(catalog_type: params[:catalog_type]), class: "btn btn-alt btn-sm btn-default toggle-bordered" do %>
+					List Products
+					<% end %>
+				</div>
+				<h2><strong>Product</strong> New</h2>
+				<%= form_for [:member, @product], :html => {:class => "form-horizontal form-bordered"} do |f| %>
+				<fieldset>
+					<div class="col-md-12">
+						<div class="panel panel-default">
+							<div class="panel-heading">Product</div>
+							<div class="panel-body">
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="example-chosen">Status</label>
+									<div class="col-md-1">
+										<%= f.check_box :status, class: 'form-control' %>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="example-chosen">Condition</label>
+									<div class="col-md-6">
+										<%= f.select :condition, options_for_select(condition, f.object.condition), {include_blank: 'condition'}, class: 'select-chosen', id: 'example-chosen'  %>              
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="example-chosen">Catalog Type</label>
+									<div class="col-md-6">
+										<%= f.select :catalog_type, options_for_select(catalog_type, f.object.catalog_type), {include_blank: 'catalog_type'}, class: 'select-chosen', id: 'example-chosen', required: true %>            
+									</div>
+								</div>
+<!-- <div class="form-group">
+<label class="col-md-4 control-label" for="example-chosen">Category</label>
+<div class="col-md-6">
+<div class="input-group">
+<%#= f.select :category_id, options_for_select(products_category_options, @product.category_id),{prompt: 'Select Category...'}, class: 'form-control' %>
+</div>
+</div>
+</div> -->
+<div class="form-group">
+	<label class="col-md-4 control-label" for="example-chosen">Title</label>
+	<div class="col-md-6">
+		<div class="input-group">
+			<%= f.text_field :title, class: 'form-control', placeholder: 'Title' %>
+			<span class="input-group-addon"><i class="gi gi-list"></i></span>
+		</div>
+	</div>
+</div>
+<div class="form-group">
+	<label class="col-md-4 control-label" for="example-chosen">Description</label>
+	<div class="col-md-8">
+		<%= f.cktext_area :description, class: 'form-control txtarea', placeholder: 'Description' %>
+	</div>
+</div>			
+<div class="form-group">
+	<label class="col-md-4 control-label" for="example-chosen">Price</label>
+	<div class="col-md-6">
+		<%= f.text_field :price, data: {autonumeric: true}, class: 'form-control', placeholder: 'Price' %>
+	</div>
+</div>
+</div>
+</div>
+
+<% if params[:catalog_type] %>
+<% if params[:catalog_type] == 'property' %>
+<div class="panel panel-default">
+	<div class="panel-heading">Property Details</div>
+	<div class="panel-body">
+		<%= f.fields_for(:product_property) do |product_property| %>
+		<%= render partial: 'product_property_form', locals: { product_property: product_property } %>
+		<% end %>
+	</div>
+</div>
+<% elsif params[:catalog_type] == 'bike' %>
+<div class="panel panel-default">
+	<div class="panel-heading">Bike Details</div>
+	<div class="panel-body">
+		<%= f.fields_for(:bike_property) do |bike_property| %>
+		<%= render partial: 'product_bike_form', locals: { bike_property: bike_property } %>
+		<% end %>
+	</div>
+</div>
+<% elsif params[:catalog_type] == 'car' %>
+<div class="panel panel-default">
+	<div class="panel-heading">Car Details</div>
+	<div class="panel-body">
+		<%= f.fields_for(:car) do |product_car| %>
+		<%= render partial: 'product_car', locals: { product_car: product_car } %>
+		<% end %>
+	</div>
+</div>
+<% elsif params[:catalog_type] == 'gadget' %>
+<div class="panel panel-default">
+	<div class="panel-heading">Gadget Details</div>
+	<div class="panel-body">
+		<%= f.fields_for(:gadget) do |gadget| %>
+		<%= render partial: 'product_gadget_form', locals: { gadget: gadget } %>
+		<% end %>
+	</div>
+</div>
+<% end %>
+<% end %>
+
+<div class="panel panel-default">
+	<div class="panel-heading">Address Details</div>
+	<div class="panel-body">
+		<%= f.fields_for(:address) do |address| %>
+		<%= render partial: 'form_address', locals: {address: address} %>
+		<% end %>
+	</div>
+</div>
+<div class="panel panel-default">
+	<div class="panel-heading">Product Image</div>
+	<div class="panel-body">
+		<%= render partial: 'form_gallery', locals: {f: f} %>
+	</div>
+</div>
+</div>
+</fieldset>
+<div class="form-group form-actions">
+	<div class="col-md-8 col-md-offset-4">
+		<%= submit_tag :save, class: 'btn btn-primary btn-sm' %>
+	</div>
+</div>
+<% end %>
+</div>			
+</div>
+</div>
+</div>

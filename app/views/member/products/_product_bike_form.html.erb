@@ -1,0 +1,62 @@
+<div class="form-group">
+	<label class="col-md-4 control-label" for="example-chosen">Brand</label>
+	<div class="col-md-6">
+		<%= bike_property.select :brand, options_for_select(brand, bike_property.object.brand), {include_blank: 'Brand'}, class: 'select-chosen', id: 'example-chosen'  %>              
+	</div>
+</div>
+<div class="form-group">
+	<label class="col-md-4 control-label" for="example-chosen">Lanufacture</label>
+	<div class="col-md-6">
+		<%= bike_property.text_field :manufacture, class: 'form-control', placeholder: 'manufacture' %>
+	</div>
+</div>
+<div class="form-group">
+	<label class="col-md-4 control-label" for="example-chosen">condition</label>
+	<div class="col-md-6">
+		<%= bike_property.text_field :condition, class: 'form-control', placeholder: 'condition' %>
+	</div>
+</div>
+<div class="form-group">
+	<label class="col-md-4 control-label" for="example-chosen">type</label>
+	<div class="col-md-6">
+		<%= bike_property.text_field :bike_type, class: 'form-control', placeholder: 'type' %>
+	</div>
+</div>
+<div class="form-group">
+	<label class="col-md-4 control-label" for="example-chosen">color</label>
+	<div class="col-md-6">
+		<%= bike_property.select :color, options_for_select(color, bike_property.object.color), {include_blank: 'Color'}, class: 'select-chosen', id: 'example-chosen'  %>              
+	</div>
+</div>
+<div class="form-group">
+	<label class="col-md-4 control-label" for="example-chosen">Production Year</label>
+	<div class="col-md-6">
+		<%= bike_property.select :production_year, (1945..Time.now.year).to_a, {include_blank: 'Production Year'}, class: 'select-chosen', id: 'example-chosen'  %>              
+	</div>
+</div>
+<div class="form-group">
+	<label class="col-md-4 control-label" for="example-chosen">Transmission</label>
+	<div class="col-md-6">
+		<%= bike_property.select :transmission, options_for_select(transmission, bike_property.object.transmission), {include_blank: 'transmission'}, class: 'select-chosen', id: 'example-chosen'  %>              
+	</div>
+</div>
+<div class="form-group">
+	<label class="col-md-4 control-label" for="example-chosen">Full Tank</label>
+	<div class="col-md-6">
+		<%= bike_property.select :full_tank, options_for_select(fulltank, bike_property.object.full_tank), {include_blank: 'full tank'}, class: 'select-chosen', id: 'example-chosen'  %>              
+	</div>
+</div>
+<div class="form-group">
+	<label class="col-md-4 control-label" for="example-chosen">Kilometer</label>
+	<div class="col-md-6">
+		<%= bike_property.text_field :kilometer, class: 'form-control', placeholder: 'kilometer' %>
+	</div>
+</div>
+<div class="form-group">
+	<label class="col-md-4 control-label" for="example-chosen">Number Plate</label>
+	<div class="col-md-6">
+		<%= bike_property.text_field :number_plate, class: 'form-control', placeholder: 'number plate' %>
+	</div>
+</div>
+
+

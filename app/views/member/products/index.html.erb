@@ -1,0 +1,49 @@
+<div class="container">
+	<div class="row">
+		<div class="br30"></div>
+		<div class="col-md-12">
+			<div class="col-md-4">
+				<div class="br30"></div>
+				<%= render 'shareds/member/sidebar_left' %>
+			</div>
+			<div class="col-md-8">
+				<%= link_to new_member_product_path(catalog_type: params[:catalog_type]) do %>
+					<div class="btn btn-success">
+						New Data
+					</div>
+					<div class="br30"></div>
+				<% end %>
+
+				<table class="table">
+					<thead>
+						<tr>
+							<th >No</th>
+							<th>Title</th>
+							<th>Price</th>
+							<th>Status</th>
+							<th >Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						<% @products.each_with_index do |product,index| %>
+						<tr>
+							<td ><%= index + 1 %></td>
+							<td><a href="javascript:void(0)"><%= product.title %></a></td>
+							<td>Rp. <%= product.price %></td>
+							<td>
+								<%= product.verified %>
+							</td>
+							<td >
+								<div class="btn-group">
+									<%= link_to 'Edit', edit_member_product_path(product, catalog_type: params[:catalog_type]), class: 'btn btn-default btn-sm' %> 
+									<%= link_to 'Delete', member_product_path(product), method: 'delete', class: 'btn btn-danger btn-sm' %> 
+								</div>
+							</td>
+						</tr>
+						<% end %>
+					</tbody>
+				</table>
+			</div>	
+		</div>
+	</div>
+</div>

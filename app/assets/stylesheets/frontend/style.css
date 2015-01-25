@@ -2067,3 +2067,8 @@ color: #888;
 .white{
 	color: #FFF!important;
 }
+
+.img-default-resize img{
+	width: 200px!important;
+	height: 200px!important;
+}
