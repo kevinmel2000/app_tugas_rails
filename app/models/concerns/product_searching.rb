@@ -13,10 +13,17 @@ module ProductSearching
       end
 
       scope :filter_by_catalog_type, ->(catalog_type) do
+        return if catalog_type.blank?
         where(catalog_type: catalog_type)
       end
 
+      scope :filter_by_location, ->(location) do
+        return if location.blank?
+        bonds.where('LOWER(addresses.city) LIKE LOWER("%#{location}%")')
+      end      
+
       scope :filter_by_bike_production_year, ->(bike_production_year) do 
+        return if bike_production_year.blank?
         bonds.where("bike_properties.production_year =?", bike_production_year)
       end
 
@@ -25,6 +32,7 @@ module ProductSearching
         filter_by_title(params[:title])
         .filter_by_catalog_type(params[:catalog_type])
         .filter_by_bike_production_year(params[:bike_production_year])
+        .filter_by_location(params[:location])
       end
   end
 end
