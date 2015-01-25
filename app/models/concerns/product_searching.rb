@@ -17,6 +17,11 @@ module ProductSearching
         where(catalog_type: catalog_type)
       end
 
+      scope :filter_by_condition, ->(condition) do
+        return if condition.blank?
+        where(condition: condition)
+      end
+
       scope :filter_by_location, ->(location) do
         return if location.blank?
         bonds_address.where("LOWER(addresses.address) LIKE LOWER('%#{location}%')")
@@ -39,6 +44,7 @@ module ProductSearching
         .filter_by_bike_production_year(params[:bike_production_year])
         .filter_by_location(params[:location])
         .filter_by_price(params[:price].blank? ? nil : params[:price].to_i, params[:price_to].blank? ? nil : params[:price_to].to_i)
+        .filter_by_condition(params[:condition])
       end
   end
 end
