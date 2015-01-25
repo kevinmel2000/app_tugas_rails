@@ -11,15 +11,15 @@ class MembersController < ApplicationController
 		render layout: 'application_member'
 	end
 
-	def update
-		if @user.update_attributes(params[:user])
-			flash[:notice] = "Succesfully updated profile!"
-			redirect_to user_profile_path
-		else
-			flash[:errors] = @user.errors.full_messages
-			redirect_to user_profile_path
-		end
-	end
+	# def update
+ #    if @user.update_attributes(params[:user])
+ #      flash[:notice] = "Successfully updated profile!"
+ #      redirect_to member_profile_path
+ #    else
+ #      flash[:errors] = @user.errors.full_messages
+ #      redirect_to member_profile_path
+ #    end
+ #  end
 
 	private
 		def draw_password
@@ -29,7 +29,7 @@ class MembersController < ApplicationController
     end
 
 		def set_object
-			@user = current_user
+			@member = current_user
 		end
 
 		def sex

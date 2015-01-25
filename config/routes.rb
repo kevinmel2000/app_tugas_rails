@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   # user
   get 'member_home',     to: 'members#member_home',        as: 'member_home'
   get 'member_profile',  to: 'members#member_profile',     as: 'member_profile'
-  get 'member_update',   to: 'members#member_update',      as: 'member_update'
+  put '/member_profile',   to: 'members#update',               as: 'member_update'
 
   namespace :backend do
     get '/', to: 'home#index'
