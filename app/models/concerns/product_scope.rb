@@ -9,9 +9,15 @@ module ProductScope
 		scope :bike, ->{where(catalog_type: 'Motor')}
 		scope :gadget, ->{where(catalog_type: 'Gadget')}
 		scope :property, ->{where(catalog_type: 'Property')}
+		scope :condition, ->{where(condition: 'Condition')}
+
 
 		scope :bonds, -> {
 	  	eager_load(:bike_property, :car, :gadget, :product_property)
+	  }
+
+	  scope :bonds_address, ->{
+	  	eager_load(:address)
 	  }
 
 		after_initialize :populate_galleries

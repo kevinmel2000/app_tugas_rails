@@ -12,7 +12,7 @@ class PublicsController < ApplicationController
 	end
 
 	def results
-		@product = Product.latest.page(params[:page]).per(10).filter_search(params)
+		@products = Product.latest.page(params[:page]).per(10).filter_search(params)
 
 		render layout: 'application_catalog'
 	end
