@@ -5,6 +5,7 @@ module ProductScope
 		scope :latest, ->{order(created_at: :desc)}
 		scope :oldest, ->{order(created_at: :asc)}
 		scope :updated, ->{order(updated: :desc)}
+		
 		scope :car, ->{where(catalog_type: 'Mobil')}
 		scope :bike, ->{where(catalog_type: 'Motor')}
 		scope :gadget, ->{where(catalog_type: 'Gadget')}

@@ -2,7 +2,7 @@ class PublicsController < ApplicationController
 	def home
 		root = Product.latest
 
-		@hot_ads = root.verified.limit(16)
+		@hot_ads    = root.verified.limit(16)
 		@latest_ads = root.limit(16)
 	end
 
